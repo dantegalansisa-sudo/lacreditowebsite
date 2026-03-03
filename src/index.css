@@ -1,0 +1,145 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════
+   GRUPO FINANCIERO M&J — Design System
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Colors */
+  --bg:          #F4F5F0;
+  --bg-white:    #FFFFFF;
+  --bg-shape:    #E8E9E4;
+  --navy:        #0D1B2A;
+  --green-lime:  #BCFF4F;
+  --green-logo:  #7CB518;
+  --text-black:  #0A0A0A;
+  --text-body:   #4A5568;
+  --text-muted:  #94A3B8;
+  --border:      #E2E8F0;
+  --shadow-sm:   0 2px 16px rgba(0,0,0,0.06);
+  --shadow-md:   0 8px 40px rgba(0,0,0,0.10);
+  --shadow-lg:   0 24px 64px rgba(0,0,0,0.12);
+
+  /* Typography Scale */
+  --text-hero:   clamp(52px, 6.5vw, 96px);
+  --text-h2:     clamp(36px, 4vw, 60px);
+  --text-h3:     clamp(20px, 2vw, 28px);
+  --text-body:   16px;
+  --text-small:  14px;
+  --text-label:  12px;
+
+  /* Weights */
+  --weight-hero: 800;
+  --weight-bold: 700;
+  --weight-semi: 600;
+  --weight-body: 400;
+
+  /* Tracking */
+  --track-tight: -0.04em;
+  --track-label: 0.08em;
+}
+
+/* ─── Reset & Base ─── */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+* {
+  font-family: 'Sora', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Sora', sans-serif;
+}
+
+/* ─── Container ─── */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 48px;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 24px;
+  }
+}
+
+/* ─── Button Styles ─── */
+.btn-black {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--text-black);
+  color: white;
+  border-radius: 50px;
+  padding: 14px 28px;
+  font-size: 15px;
+  font-weight: 600;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-black:hover {
+  background: var(--green-lime);
+  color: var(--text-black);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(188, 255, 79, 0.3);
+}
+
+.link-arrow {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--text-body);
+  transition: color 0.2s;
+  cursor: pointer;
+}
+
+.link-arrow:hover {
+  color: var(--text-black);
+}
+
+/* ─── Float Animation ─── */
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ─── Pulse Animation ─── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.3); }
+}
+
+/* ─── WhatsApp Ping ─── */
+@keyframes ping {
+  0% { transform: scale(1); opacity: 0.4; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
