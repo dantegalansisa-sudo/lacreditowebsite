@@ -69,7 +69,7 @@ export const ceo = {
   foto: '/images/ceo.jpg',
 
   // Alt text de la foto
-  fotoAlt: 'Maridani A.G. — CEO Grupo Financiero M&J',
+  fotoAlt: 'Maridani Gerbacio. — CEO Grupo Financiero M&J',
 
   // Biografía (cada elemento es un párrafo separado)
   bio: [
