@@ -3,8 +3,8 @@ import { useRef, useState, useMemo } from 'react';
 import SectionLabel from '../components/SectionLabel';
 
 const MIN = 10000;
-const MAX = 100000;
-const STEP = 5000;
+const MAX = 1000000;
+const STEP = 10000;
 const RATE = 0.04; // 4% mensual (ejemplo)
 
 interface Plan {
