@@ -1,12 +1,14 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { urgencyBanner, contacto } from '../config/siteConfig';
 
 const UrgencyBanner = () => {
   const [visible, setVisible] = useState(true);
 
-  // Get current month name in Spanish
   const month = new Date().toLocaleString('es-DO', { month: 'long' });
   const capitalMonth = month.charAt(0).toUpperCase() + month.slice(1);
+
+  const promoUrl = `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(urgencyBanner.whatsappMensaje)}`;
 
   if (!visible) return null;
 
@@ -34,7 +36,6 @@ const UrgencyBanner = () => {
             flexWrap: 'wrap',
           }}
         >
-          {/* Pulse dot */}
           <span
             style={{
               width: '8px',
@@ -45,7 +46,6 @@ const UrgencyBanner = () => {
               flexShrink: 0,
             }}
           />
-
           <p
             style={{
               fontSize: '13px',
@@ -55,14 +55,13 @@ const UrgencyBanner = () => {
             }}
           >
             <span style={{ color: 'var(--green-lime)', fontWeight: 700 }}>
-              Tasa especial este mes de {capitalMonth}
+              {urgencyBanner.textoAntes} {capitalMonth}
             </span>
             {' '}&mdash;{' '}
-            Solicita tu préstamo antes del fin de mes y obtén condiciones preferenciales
+            {urgencyBanner.textoDespues}
           </p>
-
           <a
-            href="https://wa.me/18297881795?text=Hola%2C%20quiero%20aprovechar%20la%20tasa%20especial%20de%20este%20mes"
+            href={promoUrl}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -77,10 +76,8 @@ const UrgencyBanner = () => {
               flexShrink: 0,
             }}
           >
-            Aprovechar →
+            {urgencyBanner.botonTexto}
           </a>
-
-          {/* Close button */}
           <button
             onClick={() => setVisible(false)}
             style={{
@@ -100,7 +97,6 @@ const UrgencyBanner = () => {
             ×
           </button>
         </div>
-
         <style>{`
           @media (max-width: 640px) {
             .urgency-cta { display: none !important; }

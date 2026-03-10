@@ -1,7 +1,6 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
-
-const logos = ['ARS Humano', 'ARS Senasa', 'Banco Popular', 'Asociaciones'];
+import { logosConfianza } from '../config/siteConfig';
 
 const LogosSection = () => {
   const ref = useRef(null);
@@ -65,7 +64,7 @@ const LogosSection = () => {
           }}
           className="logos-row"
         >
-          {logos.map((name) => (
+          {logosConfianza.map((name) => (
             <span
               key={name}
               style={{

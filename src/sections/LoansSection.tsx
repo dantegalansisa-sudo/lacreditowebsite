@@ -1,24 +1,10 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const loanData: Record<number, { periodo: string; frecuencia: string; cuota: string }[]> = {
-  25000: [
-    { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 2,425' },
-    { periodo: '12 quincenas', frecuencia: 'Quincenal', cuota: 'RD$ 2,833' },
-    { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 5,667' },
-  ],
-  30000: [
-    { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 2,910' },
-    { periodo: '12 quincenas', frecuencia: 'Quincenal', cuota: 'RD$ 3,400' },
-    { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 6,800' },
-  ],
-};
-
-const amounts = [25000, 30000] as const;
+import { simuladorCuotas, contacto } from '../config/siteConfig';
 
 const LoansSection = () => {
-  const [selected, setSelected] = useState<number>(25000);
+  const [selected, setSelected] = useState<number>(simuladorCuotas.montos[0]);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-80px' });
 
@@ -68,7 +54,7 @@ const LoansSection = () => {
             flexWrap: 'wrap',
           }}
         >
-          {amounts.map((amount) => (
+          {simuladorCuotas.montos.map((amount) => (
             <button
               key={amount}
               onClick={() => setSelected(amount)}
@@ -86,7 +72,7 @@ const LoansSection = () => {
             </button>
           ))}
           <a
-            href="https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20consultar%20un%20monto%20personalizado"
+            href={`https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent('Hola, me interesa consultar un monto personalizado')}`}
             target="_blank"
             rel="noopener noreferrer"
             style={{
@@ -136,7 +122,7 @@ const LoansSection = () => {
           </div>
 
           {/* Rows */}
-          {loanData[selected].map((row, i) => (
+          {simuladorCuotas.datos[selected].map((row, i) => (
             <div
               key={row.periodo}
               style={{

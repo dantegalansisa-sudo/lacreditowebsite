@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
+import { ceo } from '../config/siteConfig';
 
 const CEOSection = () => {
   const ref = useRef(null);
@@ -38,8 +39,8 @@ const CEOSection = () => {
             }}
           />
           <img
-            src="/images/ceo.jpg"
-            alt="Maridani A.G. — CEO Grupo Financiero M&J"
+            src={ceo.foto}
+            alt={ceo.fotoAlt}
             style={{
               position: 'relative',
               width: '100%',
@@ -71,37 +72,26 @@ const CEOSection = () => {
               marginBottom: '28px',
             }}
           >
-            Maridani A.G.
+            {ceo.nombre}
             <br />
             La visión detrás
             <br />
             de M&J.
           </h2>
 
-          <p
-            style={{
-              fontSize: '17px',
-              color: 'var(--text-body)',
-              lineHeight: 1.7,
-              marginBottom: '12px',
-            }}
-          >
-            Fundadora y CEO de Grupo Financiero M&J, Maridani construyó
-            esta empresa con una premisa clara: que cada dominicano tenga
-            acceso a soluciones financieras reales, rápidas y con la
-            mejor tasa del mercado.
-          </p>
-          <p
-            style={{
-              fontSize: '17px',
-              color: 'var(--text-body)',
-              lineHeight: 1.7,
-              marginBottom: '28px',
-            }}
-          >
-            Su liderazgo cercano y trato personal han convertido a M&J
-            en referente de confianza en el mercado financiero dominicano.
-          </p>
+          {ceo.bio.map((paragraph, i) => (
+            <p
+              key={i}
+              style={{
+                fontSize: '17px',
+                color: 'var(--text-body)',
+                lineHeight: 1.7,
+                marginBottom: i === ceo.bio.length - 1 ? '28px' : '12px',
+              }}
+            >
+              {paragraph}
+            </p>
+          ))}
 
           {/* Quote */}
           <div
@@ -122,18 +112,13 @@ const CEOSection = () => {
                 fontWeight: 500,
               }}
             >
-              "Solucionamos lo que te preocupa porque entendemos
-              lo que significa necesitar una respuesta rápida."
+              {ceo.cita}
             </p>
           </div>
 
           {/* Credentials */}
           <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-            {[
-              'Fundadora y CEO de Grupo Financiero M&J',
-              'Especialista en microfinanzas',
-              'Más de 5 años de experiencia en el sector',
-            ].map((cred) => (
+            {ceo.credenciales.map((cred) => (
               <li
                 key={cred}
                 style={{

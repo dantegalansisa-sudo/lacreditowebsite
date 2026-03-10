@@ -1,37 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const steps = [
-  {
-    num: '01',
-    icon: '📱',
-    title: 'Solicita',
-    desc: 'Escríbenos por WhatsApp o llena el formulario. Solo necesitas tu cédula y un comprobante de ingresos.',
-    accent: 'var(--green-lime)',
-  },
-  {
-    num: '02',
-    icon: '🔍',
-    title: 'Evaluamos',
-    desc: 'Nuestro equipo analiza tu solicitud de forma personalizada. Sin burocracia, sin largas esperas.',
-    accent: 'var(--green-logo)',
-  },
-  {
-    num: '03',
-    icon: '✅',
-    title: 'Aprobamos',
-    desc: 'En menos de 72 horas recibes tu aprobación con las condiciones claras y transparentes.',
-    accent: 'var(--green-lime)',
-  },
-  {
-    num: '04',
-    icon: '💸',
-    title: 'Desembolso',
-    desc: 'Tu dinero en manos en 24 horas hábiles. Directo a tu cuenta, sin complicaciones.',
-    accent: 'var(--green-logo)',
-  },
-];
+import { procesoSteps, whatsappUrl } from '../config/siteConfig';
 
 const ProcessSection = () => {
   const ref = useRef(null);
@@ -71,7 +41,7 @@ const ProcessSection = () => {
 
         {/* Steps */}
         <div className="process-grid">
-          {steps.map((step, i) => (
+          {procesoSteps.map((step, i) => (
             <motion.div
               key={step.num}
               initial={{ opacity: 0, y: 40 }}
@@ -87,7 +57,7 @@ const ProcessSection = () => {
               }}
             >
               {/* Connector line */}
-              {i < steps.length - 1 && (
+              {i < procesoSteps.length - 1 && (
                 <div className="process-connector" />
               )}
 
@@ -97,13 +67,13 @@ const ProcessSection = () => {
                   width: '80px',
                   height: '80px',
                   borderRadius: '50%',
-                  background: step.accent,
+                  background: i % 2 === 0 ? 'var(--green-lime)' : 'var(--green-logo)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   fontSize: '32px',
                   margin: '0 auto 20px',
-                  boxShadow: `0 8px 24px ${step.accent === 'var(--green-lime)' ? 'rgba(188,255,79,0.3)' : 'rgba(124,181,24,0.25)'}`,
+                  boxShadow: `0 8px 24px ${i % 2 === 0 ? 'rgba(188,255,79,0.3)' : 'rgba(124,181,24,0.25)'}`,
                   position: 'relative',
                   zIndex: 2,
                 }}
@@ -162,7 +132,7 @@ const ProcessSection = () => {
           style={{ textAlign: 'center', marginTop: '56px' }}
         >
           <a
-            href="https://wa.me/18297881795?text=Hola%2C%20quiero%20solicitar%20un%20pr%C3%A9stamo"
+            href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-black"

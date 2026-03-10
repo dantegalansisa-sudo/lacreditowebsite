@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-
-const whatsappUrl =
-  'https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20un%20pr%C3%A9stamo%20con%20Grupo%20Financiero%20M%26J';
+import { whatsappUrl } from '../config/siteConfig';
 
 const WhatsAppButton = () => (
   <motion.a

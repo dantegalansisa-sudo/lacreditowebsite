@@ -1,13 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const services = [
-  { icon: '💼', name: 'Préstamo Personal', desc: 'Para lo que necesites. Cuotas cómodas adaptadas a tu capacidad.', tag: 'Más popular' },
-  { icon: '🏠', name: 'Préstamo Hipotecario', desc: 'Tu casa propia con las mejores condiciones del mercado.', tag: null },
-  { icon: '🚗', name: 'Préstamo Prendario', desc: 'Tu vehículo como garantía. Rápido, simple, sin complicaciones.', tag: null },
-  { icon: '📊', name: 'Préstamo Comercial', desc: 'Impulsa tu negocio con financiamiento flexible y ágil.', tag: 'Negocio' },
-];
+import { servicios } from '../config/siteConfig';
 
 const containerVariants = {
   hidden: {},
@@ -68,7 +62,7 @@ const ServicesSection = () => {
           }}
           className="services-grid"
         >
-          {services.map((service) => (
+          {servicios.map((service) => (
             <motion.div
               key={service.name}
               variants={cardVariants}

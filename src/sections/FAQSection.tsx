@@ -1,43 +1,9 @@
 import { motion, useInView, AnimatePresence } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
+import { preguntasFrecuentes, contacto } from '../config/siteConfig';
 
-const faqs = [
-  {
-    q: '¿Qué documentos necesito para solicitar un préstamo?',
-    a: 'Solo necesitas tu cédula de identidad vigente y un comprobante de ingresos (carta de trabajo, estados de cuenta o constancia de negocio). En algunos casos podemos solicitar una referencia personal.',
-  },
-  {
-    q: '¿Cuál es la tasa de interés?',
-    a: 'Nuestras tasas son las más competitivas del mercado dominicano. La tasa final depende del monto, plazo y tu perfil crediticio. Te damos la información exacta antes de firmar cualquier compromiso.',
-  },
-  {
-    q: '¿Cuánto tiempo tarda la aprobación?',
-    a: 'Nuestro proceso de evaluación toma máximo 72 horas hábiles. En muchos casos, la respuesta es el mismo día. Una vez aprobado, el desembolso es en 24 horas.',
-  },
-  {
-    q: '¿Puedo pagar mi préstamo antes de tiempo?',
-    a: 'Sí, aceptamos pagos anticipados sin penalidad. De hecho, lo incentivamos. Pagar antes de tiempo reduce el costo total de tu préstamo.',
-  },
-  {
-    q: '¿Qué pasa si me atraso en un pago?',
-    a: 'Entendemos que pueden surgir imprevistos. Si tienes dificultades, contáctanos inmediatamente y buscaremos una solución juntos. Nuestro enfoque siempre es encontrar alternativas para que puedas cumplir.',
-  },
-  {
-    q: '¿Necesito ser asalariado para aplicar?',
-    a: 'No. Trabajamos con asalariados, independientes y dueños de negocios. Lo importante es demostrar una fuente de ingresos estable. Cada caso se evalúa de forma personalizada.',
-  },
-  {
-    q: '¿Cuáles son las formas de pago disponibles?',
-    a: 'Puedes pagar mediante transferencia bancaria, depósito en cuenta, o directamente en nuestras oficinas. También ofrecemos frecuencia semanal, quincenal o mensual según tu preferencia.',
-  },
-  {
-    q: '¿Es seguro solicitar un préstamo con ustedes?',
-    a: 'Absolutamente. Grupo Financiero M&J es una empresa seria con años de trayectoria en República Dominicana. Tu información personal se maneja con total confidencialidad y nuestros procesos son transparentes.',
-  },
-];
-
-const FAQItem = ({ faq, isOpen, onToggle }: { faq: typeof faqs[0]; isOpen: boolean; onToggle: () => void }) => (
+const FAQItem = ({ faq, isOpen, onToggle }: { faq: { q: string; a: string }; isOpen: boolean; onToggle: () => void }) => (
   <div
     style={{
       borderBottom: '1px solid var(--border)',
@@ -163,7 +129,7 @@ const FAQSection = () => {
             boxShadow: 'var(--shadow-sm)',
           }}
         >
-          {faqs.map((faq, i) => (
+          {preguntasFrecuentes.map((faq, i) => (
             <FAQItem
               key={i}
               faq={faq}
@@ -187,7 +153,7 @@ const FAQSection = () => {
             ¿No encontraste tu pregunta?
           </p>
           <a
-            href="https://wa.me/18297881795?text=Hola%2C%20tengo%20una%20pregunta%20sobre%20sus%20préstamos"
+            href={`https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent('Hola, tengo una pregunta sobre sus préstamos')}`}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-black"

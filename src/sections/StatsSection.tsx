@@ -1,13 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import AnimatedCounter from '../components/AnimatedCounter';
-
-const stats = [
-  { value: 739, suffix: '+', label: 'Clientes Satisfechos' },
-  { value: 72, suffix: 'h', label: 'Tiempo de Aprobación' },
-  { value: 24, suffix: 'h', label: 'Desembolso en' },
-  { value: 100, suffix: '%', label: 'Personalizado' },
-];
+import { estadisticas } from '../config/siteConfig';
 
 const StatsSection = () => {
   const ref = useRef(null);
@@ -22,7 +16,7 @@ const StatsSection = () => {
       }}
     >
       <div className="container stats-grid">
-        {stats.map((stat, i) => (
+        {estadisticas.map((stat, i) => (
           <motion.div
             key={stat.label}
             initial={{ opacity: 0, y: 30 }}
@@ -31,7 +25,7 @@ const StatsSection = () => {
             style={{
               textAlign: 'center',
               padding: '24px 16px',
-              borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+              borderRight: i < estadisticas.length - 1 ? '1px solid rgba(255,255,255,0.1)' : 'none',
             }}
             className="stat-item"
           >

@@ -1,6 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef, useState } from 'react';
 import SectionLabel from '../components/SectionLabel';
+import { empresa, contacto, whatsappUrl, servicios } from '../config/siteConfig';
 
 const ContactSection = () => {
   const ref = useRef(null);
@@ -17,7 +18,7 @@ const ContactSection = () => {
     e.preventDefault();
     const msg = `Hola, soy ${formData.nombre}. Me interesa un ${formData.tipoPrestamo || 'préstamo'} por ${formData.monto || 'un monto a consultar'}. ${formData.mensaje}`.trim();
     window.open(
-      `https://wa.me/18297881795?text=${encodeURIComponent(msg)}`,
+      `https://wa.me/${contacto.whatsappNumero}?text=${encodeURIComponent(msg)}`,
       '_blank'
     );
   };
@@ -107,7 +108,7 @@ const ContactSection = () => {
             {/* Logo */}
             <div>
               <div style={{ marginBottom: '32px' }}>
-                <span style={{ fontSize: '32px', fontWeight: 800 }}>M&J</span>
+                <span style={{ fontSize: '32px', fontWeight: 800 }}>{empresa.nombreCorto}</span>
                 <span
                   style={{
                     display: 'block',
@@ -119,7 +120,7 @@ const ContactSection = () => {
                     marginTop: '4px',
                   }}
                 >
-                  Grupo Financiero
+                  {empresa.subtituloLogo}
                 </span>
               </div>
 
@@ -155,7 +156,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>WhatsApp</p>
-                    <p style={{ fontSize: '15px', fontWeight: 600 }}>+1 (829) 788-1795</p>
+                    <p style={{ fontSize: '15px', fontWeight: 600 }}>{contacto.telefonoDisplay}</p>
                   </div>
                 </div>
 
@@ -177,7 +178,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Instagram</p>
-                    <p style={{ fontSize: '15px', fontWeight: 600 }}>@grupofinancieromyj</p>
+                    <p style={{ fontSize: '15px', fontWeight: 600 }}>@{contacto.instagram}</p>
                   </div>
                 </div>
 
@@ -199,7 +200,7 @@ const ContactSection = () => {
                   </div>
                   <div>
                     <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Ubicación</p>
-                    <p style={{ fontSize: '15px', fontWeight: 600 }}>República Dominicana</p>
+                    <p style={{ fontSize: '15px', fontWeight: 600 }}>{contacto.ubicacion}</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +208,7 @@ const ContactSection = () => {
 
             {/* CTA Button */}
             <a
-              href="https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20un%20pr%C3%A9stamo%20con%20Grupo%20Financiero%20M%26J"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -296,10 +297,9 @@ const ContactSection = () => {
                   onBlur={handleBlur as any}
                 >
                   <option value="">Seleccionar...</option>
-                  <option value="Préstamo Personal">Préstamo Personal</option>
-                  <option value="Préstamo Hipotecario">Préstamo Hipotecario</option>
-                  <option value="Préstamo Prendario">Préstamo Prendario</option>
-                  <option value="Préstamo Comercial">Préstamo Comercial</option>
+                  {servicios.map((s) => (
+                    <option key={s.name} value={s.name}>{s.name}</option>
+                  ))}
                 </select>
               </div>
 

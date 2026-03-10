@@ -1,24 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const testimonials = [
-  {
-    name: 'María R.',
-    initials: 'MR',
-    text: 'En menos de 3 días ya tenía mi préstamo aprobado. El trato fue excelente y me explicaron cada detalle. ¡Totalmente recomendados!',
-  },
-  {
-    name: 'Carlos M.',
-    initials: 'CM',
-    text: 'Lo que más valoro es la atención personalizada. No es un banco donde eres un número. Aquí te tratan como familia y te resuelven rápido.',
-  },
-  {
-    name: 'Ana P.',
-    initials: 'AP',
-    text: 'Necesitaba un préstamo para mi negocio urgente. Grupo M&J fue la única empresa que me dio respuesta real. Las cuotas son cómodas.',
-  },
-];
+import { testimonios } from '../config/siteConfig';
 
 const containerVariants = {
   hidden: {},
@@ -73,7 +56,7 @@ const TestimonialsSection = () => {
           animate={isInView ? 'visible' : 'hidden'}
           className="testimonials-grid"
         >
-          {testimonials.map((t) => (
+          {testimonios.map((t) => (
             <motion.div
               key={t.name}
               variants={cardVariants}

@@ -1,39 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const required = [
-  {
-    icon: '🪪',
-    title: 'Cédula de identidad',
-    desc: 'Vigente y en buen estado. Original y copia.',
-  },
-  {
-    icon: '💼',
-    title: 'Comprobante de ingresos',
-    desc: 'Carta de trabajo, últimos estados de cuenta o constancia de negocio.',
-  },
-  {
-    icon: '📄',
-    title: 'Referencia personal',
-    desc: 'Una referencia personal verificable (familiar o conocido).',
-  },
-];
-
-const optional = [
-  {
-    icon: '🏠',
-    title: 'Comprobante de domicilio',
-    desc: 'Factura de servicios reciente a tu nombre.',
-    tag: 'Según monto',
-  },
-  {
-    icon: '📋',
-    title: 'Récord crediticio',
-    desc: 'No es obligatorio, pero agiliza tu aprobación.',
-    tag: 'Opcional',
-  },
-];
+import { requisitosObligatorios, requisitosOpcionales } from '../config/siteConfig';
 
 const RequirementsSection = () => {
   const ref = useRef(null);
@@ -85,7 +53,7 @@ const RequirementsSection = () => {
 
         {/* Required docs */}
         <div className="req-grid">
-          {required.map((item, i) => (
+          {requisitosObligatorios.map((item, i) => (
             <motion.div
               key={item.title}
               initial={{ opacity: 0, y: 30 }}
@@ -179,7 +147,7 @@ const RequirementsSection = () => {
             Según el caso
           </p>
           <div className="req-optional-grid">
-            {optional.map((item, i) => (
+            {requisitosOpcionales.map((item, i) => (
               <motion.div
                 key={item.title}
                 initial={{ opacity: 0, y: 20 }}

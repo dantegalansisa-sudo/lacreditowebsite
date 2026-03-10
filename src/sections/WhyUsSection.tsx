@@ -1,15 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-
-const reasons = [
-  { icon: '⚡', num: '01', title: 'Aprobación en 72h', desc: 'Sin largas esperas. Respuesta rápida garantizada.' },
-  { icon: '💎', num: '02', title: 'Mejor Tasa del Mercado', desc: 'Tasas competitivas para que tu cuota sea cómoda.' },
-  { icon: '🤝', num: '03', title: 'Atención Personalizada', desc: 'Un asesor real, no un robot. Siempre disponible.' },
-  { icon: '💰', num: '04', title: 'Desembolso en 24h', desc: 'Tu dinero en manos en menos de 24 horas hábiles.' },
-  { icon: '📱', num: '05', title: 'Gestión por WhatsApp', desc: 'Todo el proceso desde tu teléfono. Sin papeleo.' },
-  { icon: '🔒', num: '06', title: '100% Confiable', desc: 'Institución seria con años de trayectoria en RD.' },
-];
+import { razones } from '../config/siteConfig';
 
 const containerVariants = {
   hidden: {},
@@ -65,7 +57,7 @@ const WhyUsSection = () => {
           animate={isInView ? 'visible' : 'hidden'}
           className="whyus-grid"
         >
-          {reasons.map((reason) => (
+          {razones.map((reason) => (
             <motion.div
               key={reason.num}
               variants={cardVariants}

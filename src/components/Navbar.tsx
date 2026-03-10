@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { empresa, whatsappUrl } from '../config/siteConfig';
 
 const navLinks = [
   { label: 'Inicio', href: '#inicio' },
@@ -62,7 +63,7 @@ const Navbar = () => {
               letterSpacing: '-0.02em',
             }}
           >
-            M&J
+            {empresa.nombreCorto}
           </span>
           <span
             style={{
@@ -73,7 +74,7 @@ const Navbar = () => {
               textTransform: 'uppercase',
             }}
           >
-            Grupo Financiero
+            {empresa.subtituloLogo}
           </span>
         </a>
 
@@ -106,7 +107,7 @@ const Navbar = () => {
 
         {/* Desktop CTA */}
         <motion.a
-          href="https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20un%20pr%C3%A9stamo%20con%20Grupo%20Financiero%20M%26J"
+          href={whatsappUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="nav-cta-desktop"
@@ -219,7 +220,7 @@ const Navbar = () => {
               </motion.a>
             ))}
             <a
-              href="https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20un%20pr%C3%A9stamo%20con%20Grupo%20Financiero%20M%26J"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-black"

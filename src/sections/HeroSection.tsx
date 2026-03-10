@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import FloatingCard from '../components/FloatingCard';
+import { hero, whatsappUrl, logosConfianza, ceo } from '../config/siteConfig';
 
 /* SVG mini trend line for the balance card */
 const TrendLine = () => (
@@ -98,7 +99,7 @@ const HeroSection = () => {
               marginBottom: '28px',
             }}
           >
-            ✦ SOLUCIONES FINANCIERAS EN RD
+            {hero.badge}
           </motion.span>
 
           {/* Title */}
@@ -113,12 +114,12 @@ const HeroSection = () => {
               marginBottom: '24px',
             }}
           >
-            Financiamiento
+            {hero.tituloLinea1}
             <br />
-            que te lleva
+            {hero.tituloLinea2}
             <br />
-            a tus{' '}
-            <span style={{ color: 'var(--green-logo)' }}>metas.</span>
+            {hero.tituloLinea3}
+            <span style={{ color: 'var(--green-logo)' }}>{hero.tituloAcento}</span>
           </motion.h1>
 
           {/* Description */}
@@ -132,8 +133,7 @@ const HeroSection = () => {
               marginBottom: '36px',
             }}
           >
-            Con la mejor tasa del mercado y aprobación en 72 horas.
-            De la mano contigo, en cada paso del camino.
+            {hero.descripcion}
           </motion.p>
 
           {/* Buttons */}
@@ -142,15 +142,15 @@ const HeroSection = () => {
             style={{ display: 'flex', gap: '16px', alignItems: 'center', marginBottom: '48px' }}
           >
             <a
-              href="https://wa.me/18297881795?text=Hola%2C%20me%20interesa%20un%20pr%C3%A9stamo%20con%20Grupo%20Financiero%20M%26J"
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-black"
             >
-              Solicitar Préstamo →
+              {hero.botonPrincipal}
             </a>
             <a href="#servicios" className="link-arrow">
-              ¿Cómo funciona? ↓
+              {hero.linkSecundario}
             </a>
           </motion.div>
 
@@ -169,7 +169,7 @@ const HeroSection = () => {
                   fontWeight: 500,
                 }}
               >
-                Con la confianza de cientos de familias dominicanas
+                {hero.textoConfianza}
               </p>
               <div
                 style={{
@@ -179,7 +179,7 @@ const HeroSection = () => {
                   alignItems: 'center',
                 }}
               >
-                {['ARS Humano', 'ARS Senasa', 'Banco Popular', 'Asociaciones'].map(
+                {logosConfianza.map(
                   (name) => (
                     <span
                       key={name}
@@ -229,8 +229,8 @@ const HeroSection = () => {
 
           {/* CEO Photo */}
           <img
-            src="/images/ceo.jpg"
-            alt="Maridani A.G. — CEO Grupo Financiero M&J"
+            src={ceo.foto}
+            alt={ceo.fotoAlt}
             style={{
               position: 'absolute',
               bottom: 0,
@@ -258,10 +258,10 @@ const HeroSection = () => {
                 fontSize: '20px',
               }}
             >
-              RD$ 150K
+              {hero.cardPrestado}
             </span>
             <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-              Prestado este mes
+              {hero.cardPrestadoLabel}
             </span>
             <TrendLine />
           </FloatingCard>
@@ -279,16 +279,16 @@ const HeroSection = () => {
               }}
             >
               <span style={{ color: 'var(--green-logo)', fontWeight: 700 }}>
-                +172
+                {hero.cardClientes}
               </span>
               <span style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                Nuevos clientes
+                {hero.cardClientesLabel}
               </span>
             </div>
             <span
               style={{ fontSize: '11px', color: 'var(--green-logo)' }}
             >
-              +24% este mes
+              {hero.cardClientesPorcentaje}
             </span>
           </FloatingCard>
 
@@ -321,10 +321,10 @@ const HeroSection = () => {
               </div>
               <div>
                 <div style={{ fontWeight: 700, fontSize: '14px', color: 'var(--text-black)' }}>
-                  Aprobación en 72h
+                  {hero.cardAprobacion}
                 </div>
                 <div style={{ fontSize: '12px', color: 'var(--text-muted)' }}>
-                  Rápido y seguro
+                  {hero.cardAprobacionLabel}
                 </div>
               </div>
             </div>
