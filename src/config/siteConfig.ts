@@ -63,13 +63,13 @@ export const empresa = {
 
 export const ceo = {
   // Nombre de la CEO
-  nombre: 'Maridani A.G.',
+  nombre: 'Maridani Gerbacio',
 
   // Foto (ruta relativa desde /public)
   foto: '/images/ceo.jpg',
 
   // Alt text de la foto
-  fotoAlt: 'Maridani Gerbacio. — CEO Grupo Financiero M&J',
+  fotoAlt: 'Maridani Gerbacio — CEO Grupo Financiero M&J',
 
   // Biografía (cada elemento es un párrafo separado)
   bio: [
