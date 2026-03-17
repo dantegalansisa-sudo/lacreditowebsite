@@ -346,7 +346,22 @@ export const testimonios = [
 ];
 
 // ─────────────────────────────────────────────
-// 15. PREGUNTAS FRECUENTES (FAQ)
+// 15. FORMULARIO DE SOLICITUD (Google Form)
+// ─────────────────────────────────────────────
+
+export const formularioSolicitud = {
+  // URL del Google Form
+  url: 'https://docs.google.com/forms/d/e/1FAIpQLSc8qCEqqLOno5a0lR8dpskkDNTZSU7VyvVLXipkVcnXAiuN4g/viewform?vc=0&c=0&w=1&flr=0',
+
+  // Textos de la sección
+  titulo: 'Solicita tu préstamo ahora',
+  subtitulo: 'Completa el formulario y recibe respuesta en menos de 72 horas.',
+  botonTexto: 'Llenar Solicitud →',
+  nota: 'Tu información es 100% confidencial. Solo la usamos para evaluar tu solicitud.',
+};
+
+// ─────────────────────────────────────────────
+// 16. PREGUNTAS FRECUENTES (FAQ)
 // ─────────────────────────────────────────────
 
 export const preguntasFrecuentes = [
