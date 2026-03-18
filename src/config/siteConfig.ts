@@ -21,7 +21,7 @@ export const contacto = {
   telefonoDisplay: '(829) 404-5264',
 
   // Mensaje predeterminado de WhatsApp
-  whatsappMensaje: 'Hola, vengo de la página web y me interesa un préstamo con Grupo Financiero M&J',
+  whatsappMensaje: 'Hola, vengo de su página web y me interesa un préstamo con Grupo Financiero M&J',
 
   // Instagram (sin el @)
   instagram: 'grupofinancieromyj',
