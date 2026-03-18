@@ -273,8 +273,8 @@ export const calculadora = {
   // Incrementos del slider (cada paso)
   incremento: 10000,
 
-  // Tasa de interés semanal (0.02 = 2% por semana)
-  tasaSemanal: 0.02,
+  // Tasa TOTAL para préstamos semanales de 13 semanas (0.261 = 26.1%)
+  tasaTotalSemanal: 0.261,
 
   // Tasa de interés mensual (0.06 = 6% por mes)
   tasaMensual: 0.06,

@@ -6,7 +6,7 @@ import { calculadora } from '../config/siteConfig';
 const MIN = calculadora.montoMinimo;
 const MAX = calculadora.montoMaximo;
 const STEP = calculadora.incremento;
-const RATE_SEMANAL = calculadora.tasaSemanal;
+const RATE_TOTAL_SEMANAL = calculadora.tasaTotalSemanal;
 const RATE_MENSUAL = calculadora.tasaMensual;
 
 const formatRD = (n: number) =>
@@ -19,13 +19,15 @@ const CalculatorSection = () => {
 
   const cuotas = useMemo(() => {
     return calculadora.planes.map((plan) => {
-      const rate = plan.freq === 'Semanal' ? RATE_SEMANAL : RATE_MENSUAL;
-      const total = monto * (1 + rate * plan.periods);
+      const total =
+        plan.freq === 'Semanal'
+          ? monto * (1 + RATE_TOTAL_SEMANAL)
+          : monto * (1 + RATE_MENSUAL * plan.periods);
       const cuota = total / plan.periods;
       return {
         ...plan,
-        cuota: Math.round(cuota),
-        total: Math.round(total),
+        cuota: Math.floor(cuota),
+        total: Math.floor(total),
       };
     });
   }, [monto]);
