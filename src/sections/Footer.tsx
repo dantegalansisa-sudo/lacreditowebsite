@@ -14,20 +14,16 @@ const Footer = () => {
         {/* Col 1 — Logo */}
         <div>
           <div style={{ marginBottom: '16px' }}>
-            <span style={{ fontSize: '28px', fontWeight: 800, color: 'white' }}>{empresa.nombreCorto}</span>
-            <span
+            <img
+              src="/images/logo.png"
+              alt={empresa.nombreCompleto}
               style={{
-                display: 'block',
-                fontSize: '11px',
-                fontWeight: 500,
-                color: 'rgba(255,255,255,0.4)',
-                letterSpacing: '0.06em',
-                textTransform: 'uppercase',
-                marginTop: '4px',
+                height: '56px',
+                width: 'auto',
+                objectFit: 'contain',
+                filter: 'brightness(0) invert(1)',
               }}
-            >
-              {empresa.subtituloLogo}
-            </span>
+            />
           </div>
           <p
             style={{
