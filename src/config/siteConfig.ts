@@ -15,10 +15,10 @@
 
 export const contacto = {
   // Número de WhatsApp (sin guiones ni espacios, con código de país)
-  whatsappNumero: '18297881795',
+  whatsappNumero: '18294045264',
 
   // Cómo se muestra el teléfono en la web
-  telefonoDisplay: '+1 (829) 788-1795',
+  telefonoDisplay: '(829) 404-5264',
 
   // Mensaje predeterminado de WhatsApp
   whatsappMensaje: 'Hola, me interesa un préstamo con Grupo Financiero M&J',
