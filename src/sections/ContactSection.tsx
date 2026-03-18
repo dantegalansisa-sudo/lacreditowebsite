@@ -108,20 +108,18 @@ const ContactSection = () => {
             {/* Logo */}
             <div>
               <div style={{ marginBottom: '32px' }}>
-                <span style={{ fontSize: '32px', fontWeight: 800 }}>{empresa.nombreCorto}</span>
-                <span
+                <img
+                  src="/images/logo.png"
+                  alt={empresa.nombreCompleto}
                   style={{
-                    display: 'block',
-                    fontSize: '12px',
-                    fontWeight: 500,
-                    color: 'rgba(255,255,255,0.5)',
-                    letterSpacing: '0.06em',
-                    textTransform: 'uppercase',
-                    marginTop: '4px',
+                    height: '56px',
+                    width: 'auto',
+                    objectFit: 'contain',
+                    borderRadius: '8px',
+                    background: 'white',
+                    padding: '6px 10px',
                   }}
-                >
-                  {empresa.subtituloLogo}
-                </span>
+                />
               </div>
 
               <p

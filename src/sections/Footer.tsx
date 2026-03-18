@@ -21,7 +21,9 @@ const Footer = () => {
                 height: '56px',
                 width: 'auto',
                 objectFit: 'contain',
-                filter: 'brightness(0) invert(1)',
+                borderRadius: '8px',
+                background: 'white',
+                padding: '6px 10px',
               }}
             />
           </div>
