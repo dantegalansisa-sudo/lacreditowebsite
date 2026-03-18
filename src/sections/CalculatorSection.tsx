@@ -6,7 +6,8 @@ import { calculadora } from '../config/siteConfig';
 const MIN = calculadora.montoMinimo;
 const MAX = calculadora.montoMaximo;
 const STEP = calculadora.incremento;
-const RATE = calculadora.tasaMensual;
+const RATE_SEMANAL = calculadora.tasaSemanal;
+const RATE_MENSUAL = calculadora.tasaMensual;
 
 const formatRD = (n: number) =>
   'RD$ ' + n.toLocaleString('es-DO', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
@@ -18,7 +19,8 @@ const CalculatorSection = () => {
 
   const cuotas = useMemo(() => {
     return calculadora.planes.map((plan) => {
-      const total = monto * (1 + RATE * (plan.freq === 'Semanal' ? plan.periods / 4 : plan.periods));
+      const rate = plan.freq === 'Semanal' ? RATE_SEMANAL : RATE_MENSUAL;
+      const total = monto * (1 + rate * plan.periods);
       const cuota = total / plan.periods;
       return {
         ...plan,

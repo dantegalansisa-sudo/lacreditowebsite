@@ -273,8 +273,11 @@ export const calculadora = {
   // Incrementos del slider (cada paso)
   incremento: 10000,
 
-  // Tasa de interés mensual (0.04 = 4%)
-  tasaMensual: 0.04,
+  // Tasa de interés semanal (0.02 = 2% por semana)
+  tasaSemanal: 0.02,
+
+  // Tasa de interés mensual (0.06 = 6% por mes)
+  tasaMensual: 0.06,
 
   // Monto inicial que muestra el slider al cargar
   montoInicial: 25000,
@@ -292,20 +295,26 @@ export const calculadora = {
 // ─────────────────────────────────────────────
 
 export const simuladorCuotas = {
-  // Montos disponibles en los tabs
-  montos: [25000, 30000] as const,
+  // Montos disponibles en los tabs (datos reales del negocio)
+  montos: [10000, 25000, 50000, 100000] as const,
 
-  // Datos por cada monto
+  // Datos por cada monto — Semanal: 2% semanal | Mensual: 6% mensual
   datos: {
+    10000: [
+      { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 970' },
+      { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 2,266' },
+    ],
     25000: [
       { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 2,425' },
-      { periodo: '12 quincenas', frecuencia: 'Quincenal', cuota: 'RD$ 2,833' },
-      { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 5,667' },
+      { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 5,666' },
     ],
-    30000: [
-      { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 2,910' },
-      { periodo: '12 quincenas', frecuencia: 'Quincenal', cuota: 'RD$ 3,400' },
-      { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 6,800' },
+    50000: [
+      { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 4,850' },
+      { periodo: '6 meses', frecuencia: 'Mensual', cuota: 'RD$ 11,333' },
+    ],
+    100000: [
+      { periodo: '13 semanas', frecuencia: 'Semanal', cuota: 'RD$ 9,700' },
+      { periodo: '12 meses', frecuencia: 'Mensual', cuota: 'RD$ 14,333' },
     ],
   } as Record<number, { periodo: string; frecuencia: string; cuota: string }[]>,
 };
