@@ -54,28 +54,16 @@ const Navbar = () => {
         }}
       >
         {/* Logo */}
-        <a href="#inicio" style={{ display: 'flex', alignItems: 'baseline', gap: '8px' }}>
-          <span
+        <a href="#inicio" style={{ display: 'flex', alignItems: 'center' }}>
+          <img
+            src="/images/logo.png"
+            alt={empresa.nombreCompleto}
             style={{
-              fontSize: '24px',
-              fontWeight: 800,
-              color: 'var(--navy)',
-              letterSpacing: '-0.02em',
+              height: '48px',
+              width: 'auto',
+              objectFit: 'contain',
             }}
-          >
-            {empresa.nombreCorto}
-          </span>
-          <span
-            style={{
-              fontSize: '11px',
-              fontWeight: 500,
-              color: 'var(--text-muted)',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-            }}
-          >
-            {empresa.subtituloLogo}
-          </span>
+          />
         </a>
 
         {/* Desktop Links */}
