@@ -20,7 +20,8 @@ const UrgencyBanner = () => {
         exit={{ y: -40, opacity: 0 }}
         transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
         style={{
-          position: 'relative',
+          position: 'sticky',
+          top: 0,
           zIndex: 120,
           background: 'var(--navy)',
           padding: '10px 0',

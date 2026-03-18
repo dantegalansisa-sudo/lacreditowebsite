@@ -32,15 +32,13 @@ const Navbar = () => {
   return (
     <nav
       style={{
-        position: 'fixed',
+        position: 'sticky',
         top: 0,
-        left: 0,
-        right: 0,
         height: '72px',
         background: scrolled ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.8)',
         backdropFilter: 'blur(12px)',
         boxShadow: scrolled ? '0 1px 20px rgba(0,0,0,0.06)' : 'none',
-        zIndex: 100,
+        zIndex: 110,
         transition: 'all 0.3s ease',
       }}
     >

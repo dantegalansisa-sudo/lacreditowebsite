@@ -62,7 +62,7 @@ const HeroSection = () => {
       id="inicio"
       style={{
         background: 'var(--bg)',
-        paddingTop: '120px',
+        paddingTop: '48px',
         paddingBottom: '80px',
         minHeight: '100vh',
         display: 'flex',
