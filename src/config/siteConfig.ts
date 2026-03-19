@@ -359,7 +359,33 @@ export const formularioSolicitud = {
 };
 
 // ─────────────────────────────────────────────
-// 16. PREGUNTAS FRECUENTES (FAQ)
+// 16. FIRMA DIGITAL
+// ─────────────────────────────────────────────
+
+export const firmaDigital = {
+  // Textos de la sección
+  titulo: 'Firma tu solicitud digitalmente',
+  subtitulo: 'Completa los datos y firma para generar tu documento de solicitud. Es rápido, seguro y 100% digital.',
+
+  // Labels del formulario
+  labelNombre: 'Nombre completo',
+  labelCedula: 'Cédula de identidad',
+  labelMonto: 'Monto solicitado',
+  labelTipoPrestamo: 'Tipo de préstamo',
+
+  // Pad de firma
+  signaturePlaceholder: 'Firma aquí con tu dedo o mouse',
+  clearButtonText: 'Limpiar firma',
+
+  // Botón submit
+  submitButtonText: 'Generar y Descargar PDF →',
+
+  // Nota de confianza
+  nota: 'Este documento tiene validez como solicitud preliminar. Un asesor se comunicará contigo para completar el proceso.',
+};
+
+// ─────────────────────────────────────────────
+// 17. PREGUNTAS FRECUENTES (FAQ)
 // ─────────────────────────────────────────────
 
 export const preguntasFrecuentes = [

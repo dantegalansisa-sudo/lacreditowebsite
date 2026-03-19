@@ -9,6 +9,7 @@ import ServicesSection from './sections/ServicesSection';
 import StatsSection from './sections/StatsSection';
 import CalculatorSection from './sections/CalculatorSection';
 import SolicitudSection from './sections/SolicitudSection';
+import SignatureSection from './sections/SignatureSection';
 import CEOSection from './sections/CEOSection';
 import LoansSection from './sections/LoansSection';
 import WhyUsSection from './sections/WhyUsSection';
@@ -29,6 +30,7 @@ function App() {
       <StatsSection />
       <CalculatorSection />
       <SolicitudSection />
+      <SignatureSection />
       <CEOSection />
       <LoansSection />
       <WhyUsSection />

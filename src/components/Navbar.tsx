@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Nosotros', href: '#nosotros' },
   { label: 'CEO', href: '#ceo' },
   { label: 'Préstamos', href: '#prestamos' },
+  { label: 'Firma Digital', href: '#firma-digital' },
   { label: 'Contacto', href: '#contacto' },
 ];
 
