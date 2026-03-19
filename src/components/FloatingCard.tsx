@@ -5,10 +5,12 @@ interface FloatingCardProps {
   children: ReactNode;
   style?: CSSProperties;
   delay?: number;
+  className?: string;
 }
 
-const FloatingCard = ({ children, style, delay = 0 }: FloatingCardProps) => (
+const FloatingCard = ({ children, style, delay = 0, className }: FloatingCardProps) => (
   <motion.div
+    className={className}
     initial={{ opacity: 0, scale: 0.8, y: 20 }}
     animate={{ opacity: 1, scale: 1, y: 0 }}
     transition={{

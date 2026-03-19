@@ -2,7 +2,7 @@ import UrgencyBanner from './components/UrgencyBanner';
 import Navbar from './components/Navbar';
 import WhatsAppButton from './components/WhatsAppButton';
 import HeroSection from './sections/HeroSection';
-import LogosSection from './sections/LogosSection';
+
 import ProcessSection from './sections/ProcessSection';
 import RequirementsSection from './sections/RequirementsSection';
 import ServicesSection from './sections/ServicesSection';
@@ -23,7 +23,6 @@ function App() {
       <UrgencyBanner />
       <Navbar />
       <HeroSection />
-      <LogosSection />
       <ProcessSection />
       <RequirementsSection />
       <ServicesSection />

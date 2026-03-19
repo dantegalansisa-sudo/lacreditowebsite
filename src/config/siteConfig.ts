@@ -139,18 +139,7 @@ export const urgencyBanner = {
 };
 
 // ─────────────────────────────────────────────
-// 6. LOGOS DE CONFIANZA
-// ─────────────────────────────────────────────
-
-export const logosConfianza = [
-  'ARS Humano',
-  'ARS Senasa',
-  'Banco Popular',
-  'Asociaciones',
-];
-
-// ─────────────────────────────────────────────
-// 7. PROCESO (4 pasos)
+// 6. PROCESO (4 pasos)
 // ─────────────────────────────────────────────
 
 export const procesoSteps = [
