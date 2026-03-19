@@ -385,7 +385,116 @@ export const firmaDigital = {
 };
 
 // ─────────────────────────────────────────────
-// 17. PREGUNTAS FRECUENTES (FAQ)
+// 17. HISTORIAS DE CLIENTES (Testimonios Reales)
+// ─────────────────────────────────────────────
+
+export const historiasClientes = {
+  titulo: 'Historias que nos inspiran',
+  subtitulo: 'Clientes reales que transformaron su vida con nuestros servicios financieros.',
+  alertaTexto: 'Estamos recopilando los testimonios reales de nuestros clientes. Próximamente verás sus historias aquí.',
+
+  // Testimonios placeholder — reemplazar con datos reales
+  historias: [
+    {
+      nombre: 'Próximamente',
+      ocupacion: 'Cliente verificado',
+      foto: '', // Poner ruta a foto real, ej: '/images/clientes/juan.jpg'
+      videoUrl: '', // Poner URL de YouTube/video, ej: 'https://youtube.com/watch?v=...'
+      historia: 'Historia real de un cliente que logró adquirir su vivienda propia gracias al financiamiento oportuno de Grupo Financiero M&J.',
+      tipoPrestamo: 'Préstamo Hipotecario',
+      tiempoCliente: 'Cliente desde 2023',
+    },
+    {
+      nombre: 'Próximamente',
+      ocupacion: 'Cliente verificado',
+      foto: '',
+      videoUrl: '',
+      historia: 'Historia real de un emprendedor que impulsó su negocio con el respaldo financiero de M&J y hoy tiene un negocio próspero.',
+      tipoPrestamo: 'Préstamo Comercial',
+      tiempoCliente: 'Cliente desde 2024',
+    },
+    {
+      nombre: 'Próximamente',
+      ocupacion: 'Cliente verificado',
+      foto: '',
+      videoUrl: '',
+      historia: 'Historia real de una familia que resolvió una emergencia financiera gracias a la rapidez y confianza de Grupo Financiero M&J.',
+      tipoPrestamo: 'Préstamo Personal',
+      tiempoCliente: 'Cliente desde 2024',
+    },
+  ],
+};
+
+// ─────────────────────────────────────────────
+// 18. EQUIPO DE TRABAJO
+// ─────────────────────────────────────────────
+
+export const equipoTrabajo = {
+  titulo: 'Conoce a nuestro equipo',
+  subtitulo: 'Las personas detrás de cada solución financiera. Profesionales comprometidos con tu bienestar.',
+  alertaTexto: 'Estamos actualizando la información de nuestro equipo. Los datos de contacto estarán disponibles próximamente.',
+
+  // Equipo placeholder — reemplazar con datos reales
+  miembros: [
+    {
+      nombre: 'Próximamente',
+      cargo: 'Gerente General',
+      departamento: 'Gerencia',
+      foto: '', // Poner ruta a foto real, ej: '/images/equipo/nombre.jpg'
+      telefono: '', // Ej: '(829) 000-0000'
+      email: '', // Ej: 'gerencia@grupofinancieromj.com'
+      descripcion: 'Dirige la operación general de la empresa, establece las estrategias de crecimiento y asegura la calidad del servicio.',
+    },
+    {
+      nombre: 'Próximamente',
+      cargo: 'Oficial de Crédito',
+      departamento: 'Créditos',
+      foto: '',
+      telefono: '',
+      email: '',
+      descripcion: 'Evalúa las solicitudes de préstamo, analiza perfiles crediticios y asesora a los clientes sobre las mejores opciones.',
+    },
+    {
+      nombre: 'Próximamente',
+      cargo: 'Encargado/a de Contabilidad',
+      departamento: 'Contabilidad',
+      foto: '',
+      telefono: '',
+      email: '',
+      descripcion: 'Gestiona los estados financieros, reportes contables y asegura el cumplimiento fiscal de la empresa.',
+    },
+    {
+      nombre: 'Próximamente',
+      cargo: 'Cajero/a Principal',
+      departamento: 'Caja',
+      foto: '',
+      telefono: '',
+      email: '',
+      descripcion: 'Maneja los desembolsos, recibe los pagos de cuotas y gestiona el flujo de efectivo diario.',
+    },
+    {
+      nombre: 'Próximamente',
+      cargo: 'Asesor/a de Cobros',
+      departamento: 'Cobros',
+      foto: '',
+      telefono: '',
+      email: '',
+      descripcion: 'Da seguimiento a los pagos, mantiene comunicación con los clientes y gestiona los acuerdos de pago.',
+    },
+    {
+      nombre: 'Próximamente',
+      cargo: 'Atención al Cliente',
+      departamento: 'Servicio al Cliente',
+      foto: '',
+      telefono: '',
+      email: '',
+      descripcion: 'Primer punto de contacto para los clientes. Brinda información, resuelve dudas y agenda citas.',
+    },
+  ],
+};
+
+// ─────────────────────────────────────────────
+// 19. PREGUNTAS FRECUENTES (FAQ)
 // ─────────────────────────────────────────────
 
 export const preguntasFrecuentes = [

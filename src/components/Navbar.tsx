@@ -9,6 +9,7 @@ const navLinks = [
   { label: 'CEO', href: '#ceo' },
   { label: 'Préstamos', href: '#prestamos' },
   { label: 'Firma Digital', href: '#firma-digital' },
+  { label: 'Equipo', href: '#equipo' },
   { label: 'Contacto', href: '#contacto' },
 ];
 

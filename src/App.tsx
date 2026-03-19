@@ -14,6 +14,8 @@ import CEOSection from './sections/CEOSection';
 import LoansSection from './sections/LoansSection';
 import WhyUsSection from './sections/WhyUsSection';
 import TestimonialsSection from './sections/TestimonialsSection';
+import HistoriasClientesSection from './sections/HistoriasClientesSection';
+import EquipoSection from './sections/EquipoSection';
 import FAQSection from './sections/FAQSection';
 import ContactSection from './sections/ContactSection';
 import Footer from './sections/Footer';
@@ -35,6 +37,8 @@ function App() {
       <LoansSection />
       <WhyUsSection />
       <TestimonialsSection />
+      <HistoriasClientesSection />
+      <EquipoSection />
       <FAQSection />
       <ContactSection />
       <Footer />
