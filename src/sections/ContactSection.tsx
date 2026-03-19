@@ -194,6 +194,64 @@ const ContactSection = () => {
                       flexShrink: 0,
                     }}
                   >
+                    ✉️
+                  </div>
+                  <div>
+                    <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Email General</p>
+                    <a
+                      href={`mailto:${contacto.emailGeneral}`}
+                      style={{ fontSize: '14px', fontWeight: 600, color: 'white', transition: 'color 0.2s' }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-lime)')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
+                    >
+                      {contacto.emailGeneral}
+                    </a>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '12px',
+                      background: 'rgba(255,255,255,0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '18px',
+                      flexShrink: 0,
+                    }}
+                  >
+                    👥
+                  </div>
+                  <div>
+                    <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.5)' }}>Gestión Humana</p>
+                    <a
+                      href={`mailto:${contacto.emailRRHH}`}
+                      style={{ fontSize: '14px', fontWeight: 600, color: 'white', transition: 'color 0.2s' }}
+                      onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-lime)')}
+                      onMouseLeave={(e) => (e.currentTarget.style.color = 'white')}
+                    >
+                      {contacto.emailRRHH}
+                    </a>
+                  </div>
+                </div>
+
+                <div style={{ display: 'flex', alignItems: 'center', gap: '14px' }}>
+                  <div
+                    style={{
+                      width: '40px',
+                      height: '40px',
+                      borderRadius: '12px',
+                      background: 'rgba(255,255,255,0.1)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      fontSize: '18px',
+                      flexShrink: 0,
+                    }}
+                  >
                     📍
                   </div>
                   <div>

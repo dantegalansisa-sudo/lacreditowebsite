@@ -26,6 +26,10 @@ export const contacto = {
   // Instagram (sin el @)
   instagram: 'grupofinancieromyj',
 
+  // Emails de la empresa
+  emailGeneral: 'grupofinanciero@gmail.com',
+  emailRRHH: 'Gestionhumanagrupomj@gmail.com',
+
   // Ubicación
   ubicacion: 'República Dominicana',
 };

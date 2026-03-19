@@ -1,7 +1,9 @@
+import { useState } from 'react';
 import { empresa, contacto, servicios } from '../config/siteConfig';
 
 const Footer = () => {
   const footerLinks = servicios.map((s) => ({ label: s.name, href: '#servicios' }));
+  const [showPrivacy, setShowPrivacy] = useState(false);
   return (
     <footer
       style={{
@@ -123,6 +125,50 @@ const Footer = () => {
                 @{contacto.instagram}
               </a>
             </li>
+            <li>
+              <a
+                href={`mailto:${contacto.emailGeneral}`}
+                style={{
+                  fontSize: '14px',
+                  color: 'rgba(255,255,255,0.5)',
+                  transition: 'color 0.2s',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-lime)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeLinecap="round" strokeLinejoin="round" />
+                  <polyline points="22,6 12,13 2,6" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {contacto.emailGeneral}
+              </a>
+            </li>
+            <li>
+              <a
+                href={`mailto:${contacto.emailRRHH}`}
+                style={{
+                  fontSize: '14px',
+                  color: 'rgba(255,255,255,0.5)',
+                  transition: 'color 0.2s',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-lime)')}
+                onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.5)')}
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                  <path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2" strokeLinecap="round" strokeLinejoin="round" />
+                  <circle cx="9" cy="7" r="4" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M23 21v-2a4 4 0 00-3-3.87" strokeLinecap="round" strokeLinejoin="round" />
+                  <path d="M16 3.13a4 4 0 010 7.75" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {contacto.emailRRHH}
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -144,10 +190,179 @@ const Footer = () => {
         <p style={{ fontSize: '13px', color: 'rgba(255,255,255,0.3)' }}>
           © {new Date().getFullYear()} {empresa.copyright}
         </p>
-        <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.2)' }}>
-          {empresa.creditoDiseno}
-        </p>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '20px', flexWrap: 'wrap' }}>
+          <button
+            onClick={() => setShowPrivacy(true)}
+            style={{
+              fontSize: '13px',
+              color: 'rgba(255,255,255,0.4)',
+              background: 'none',
+              padding: 0,
+              transition: 'color 0.2s',
+            }}
+            onMouseEnter={(e) => (e.currentTarget.style.color = 'var(--green-lime)')}
+            onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(255,255,255,0.4)')}
+          >
+            Política de Privacidad
+          </button>
+          <span style={{ color: 'rgba(255,255,255,0.15)' }}>|</span>
+          <p style={{ fontSize: '12px', color: 'rgba(255,255,255,0.2)' }}>
+            {empresa.creditoDiseno}
+          </p>
+        </div>
       </div>
+
+      {/* Privacy Policy Modal */}
+      {showPrivacy && (
+        <div
+          style={{
+            position: 'fixed',
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            background: 'rgba(0,0,0,0.6)',
+            backdropFilter: 'blur(4px)',
+            zIndex: 200,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '24px',
+          }}
+          onClick={(e) => { if (e.target === e.currentTarget) setShowPrivacy(false); }}
+        >
+          <div
+            style={{
+              background: 'white',
+              borderRadius: '24px',
+              maxWidth: '720px',
+              width: '100%',
+              maxHeight: '80vh',
+              overflow: 'hidden',
+              display: 'flex',
+              flexDirection: 'column',
+            }}
+          >
+            {/* Modal Header */}
+            <div
+              style={{
+                padding: '28px 32px',
+                borderBottom: '1px solid var(--border)',
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                flexShrink: 0,
+              }}
+            >
+              <h3 style={{ fontSize: '20px', fontWeight: 700, color: 'var(--text-black)' }}>
+                Política de Privacidad
+              </h3>
+              <button
+                onClick={() => setShowPrivacy(false)}
+                style={{
+                  width: '36px',
+                  height: '36px',
+                  borderRadius: '50%',
+                  background: 'var(--bg)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontSize: '18px',
+                  color: 'var(--text-body)',
+                  transition: 'background 0.2s',
+                }}
+                onMouseEnter={(e) => (e.currentTarget.style.background = 'var(--border)')}
+                onMouseLeave={(e) => (e.currentTarget.style.background = 'var(--bg)')}
+                aria-label="Cerrar"
+              >
+                ✕
+              </button>
+            </div>
+
+            {/* Modal Body */}
+            <div
+              style={{
+                padding: '32px',
+                overflowY: 'auto',
+                fontSize: '14px',
+                color: 'var(--text-body)',
+                lineHeight: 1.8,
+              }}
+            >
+              <p style={{ fontSize: '13px', color: 'var(--text-muted)', marginBottom: '24px' }}>
+                Última actualización: {new Date().toLocaleDateString('es-DO', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                1. Información que recopilamos
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                {empresa.nombreCompleto} recopila información personal que usted nos proporciona voluntariamente al solicitar nuestros servicios financieros, incluyendo: nombre completo, número de cédula de identidad, número de teléfono, dirección de correo electrónico, información laboral y datos financieros necesarios para evaluar su solicitud de préstamo.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                2. Uso de la información
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                La información recopilada se utiliza exclusivamente para: evaluar solicitudes de préstamo, comunicarnos con usted respecto a su solicitud, gestionar su cuenta y pagos, cumplir con requisitos legales y regulatorios, y mejorar nuestros servicios.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                3. Protección de datos
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                Implementamos medidas de seguridad técnicas y organizativas para proteger su información personal contra acceso no autorizado, alteración, divulgación o destrucción. Su información se almacena de forma segura y solo el personal autorizado tiene acceso a ella.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                4. Compartir información
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                No vendemos, alquilamos ni compartimos su información personal con terceros, excepto cuando sea necesario para: cumplir con la ley o una orden judicial, proteger nuestros derechos legales, o con su consentimiento explícito.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                5. Firma digital
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                Los documentos firmados digitalmente a través de nuestra plataforma tienen validez como solicitud preliminar. La firma digital que usted proporciona se utiliza únicamente para la solicitud de préstamo y se almacena de forma segura.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                6. Derechos del usuario
+              </h4>
+              <p style={{ marginBottom: '20px' }}>
+                Usted tiene derecho a: acceder a su información personal, solicitar la corrección de datos inexactos, solicitar la eliminación de sus datos (cuando no exista una obligación legal de retención), y retirar su consentimiento en cualquier momento.
+              </p>
+
+              <h4 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--text-black)', marginBottom: '8px' }}>
+                7. Contacto
+              </h4>
+              <p style={{ marginBottom: '8px' }}>
+                Para consultas sobre esta política de privacidad o para ejercer sus derechos, puede contactarnos a través de:
+              </p>
+              <ul style={{ paddingLeft: '20px', marginBottom: '20px' }}>
+                <li>Email: {contacto.emailGeneral}</li>
+                <li>WhatsApp: {contacto.telefonoDisplay}</li>
+                <li>Instagram: @{contacto.instagram}</li>
+              </ul>
+
+              <div
+                style={{
+                  background: 'var(--bg)',
+                  borderRadius: '12px',
+                  padding: '16px 20px',
+                  marginTop: '12px',
+                }}
+              >
+                <p style={{ fontSize: '13px', color: 'var(--text-muted)' }}>
+                  {empresa.nombreCompleto} se reserva el derecho de actualizar esta política de privacidad en cualquier momento. Los cambios serán publicados en esta página.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       <style>{`
         .footer-grid {
