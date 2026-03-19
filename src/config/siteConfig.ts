@@ -84,7 +84,7 @@ export const ceo = {
   credenciales: [
     'Fundadora y CEO de Grupo Financiero M&J',
     'Especialista en microfinanzas',
-    'Más de 5 años de experiencia en el sector',
+    'Más de 15 años de experiencia en el sector',
   ],
 };
 
