@@ -59,8 +59,8 @@ const LoansSection = () => {
               key={amount}
               onClick={() => setSelected(amount)}
               style={{
-                background: selected === amount ? 'var(--text-black)' : 'var(--border)',
-                color: selected === amount ? 'white' : 'var(--text-body)',
+                background: selected === amount ? 'var(--green-lime)' : 'var(--border)',
+                color: selected === amount ? 'var(--text-black)' : 'var(--text-body)',
                 borderRadius: '50px',
                 padding: '12px 24px',
                 fontSize: '15px',

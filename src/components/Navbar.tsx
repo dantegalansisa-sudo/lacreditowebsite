@@ -97,10 +97,10 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="nav-cta-desktop"
-          whileHover={{ scale: 1.03, backgroundColor: '#BCFF4F', color: '#0A0A0A' }}
+          whileHover={{ scale: 1.03, backgroundColor: '#0D1B2A', color: '#FFFFFF' }}
           style={{
-            background: '#0A0A0A',
-            color: 'white',
+            background: '#BCFF4F',
+            color: '#0A0A0A',
             borderRadius: '50px',
             padding: '12px 24px',
             fontSize: '14px',
