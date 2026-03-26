@@ -86,7 +86,37 @@ export const liderazgo = {
 };
 
 // ─────────────────────────────────────────────
-// 4. HERO SECTION
+// 4. INVERSIONISTAS Y RESPALDO
+// ─────────────────────────────────────────────
+
+export const inversionistas = {
+  titulo: 'Respaldados por inversionistas que confían en nosotros',
+  subtitulo: 'Más de 10 inversionistas han decidido crecer junto a nuestra empresa, consolidando nuestra posición como una institución financiera sólida y confiable.',
+  numeroInversionistas: '10+',
+  labelInversionistas: 'Inversionistas',
+  frase: 'Su confianza impulsa nuestro compromiso con cada cliente',
+
+  beneficios: [
+    {
+      icono: '💎',
+      titulo: 'Solidez Financiera',
+      descripcion: 'Respaldados por inversionistas que garantizan nuestra estabilidad y crecimiento sostenido.',
+    },
+    {
+      icono: '🚀',
+      titulo: 'Crecimiento Continuo',
+      descripcion: 'La inversión nos permite expandir servicios y mejorar la experiencia de nuestros clientes.',
+    },
+    {
+      icono: '🤝',
+      titulo: 'Confianza Comprobada',
+      descripcion: 'Inversionistas serios que han verificado nuestra trayectoria y modelo de negocio.',
+    },
+  ],
+};
+
+// ─────────────────────────────────────────────
+// 5. HERO SECTION
 // ─────────────────────────────────────────────
 
 export const hero = {
