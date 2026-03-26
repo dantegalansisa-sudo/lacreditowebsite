@@ -154,10 +154,10 @@ const EquipoSection = () => {
               {/* Photo / Avatar */}
               <div
                 style={{
-                  width: '80px',
-                  height: '80px',
+                  width: '140px',
+                  height: '140px',
                   borderRadius: '50%',
-                  marginBottom: '20px',
+                  marginBottom: '24px',
                   overflow: 'hidden',
                   background: m.foto
                     ? 'transparent'
@@ -165,7 +165,8 @@ const EquipoSection = () => {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  boxShadow: '0 4px 16px rgba(0,0,0,0.08)',
+                  boxShadow: '0 8px 24px rgba(0,0,0,0.12)',
+                  margin: '0 auto 24px',
                 }}
               >
                 {m.foto ? (
@@ -175,7 +176,7 @@ const EquipoSection = () => {
                     style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                   />
                 ) : (
-                  <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5">
+                  <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,0.7)" strokeWidth="1.5">
                     <path d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.5 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.5-1.632z" strokeLinecap="round" strokeLinejoin="round" />
                   </svg>
                 )}
