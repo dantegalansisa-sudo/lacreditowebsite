@@ -452,6 +452,24 @@ export const equipoTrabajo = {
       descripcion: 'Gestiona el talento humano de la empresa, coordina procesos de contratación, capacitación y desarrollo del personal.',
     },
     {
+      nombre: 'Jennifer Ferrera',
+      cargo: 'Encargada de Contabilidad',
+      departamento: 'Contabilidad',
+      foto: '', // Foto pendiente
+      telefono: '',
+      email: '',
+      descripcion: 'Dirige el departamento de contabilidad, supervisa los procesos contables y financieros, y asegura el cumplimiento de las normativas fiscales.',
+    },
+    {
+      nombre: 'Rosa Pantaleón',
+      cargo: 'Auxiliar de Contabilidad',
+      departamento: 'Contabilidad',
+      foto: '', // Foto pendiente
+      telefono: '',
+      email: '',
+      descripcion: 'Apoya en los procesos contables, registra transacciones financieras y colabora en la preparación de reportes contables.',
+    },
+    {
       nombre: 'Nelsida Valdez',
       cargo: 'Auxiliar de Contabilidad y Área Legal',
       departamento: 'Contabilidad',
