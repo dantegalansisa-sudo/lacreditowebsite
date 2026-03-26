@@ -69,35 +69,37 @@ const EquipoSection = () => {
           </p>
         </motion.div>
 
-        {/* Alert Banner */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.5, delay: 0.2 }}
-          style={{
-            background: 'linear-gradient(135deg, #EBF5FF, #DBEAFE)',
-            border: '1px solid #93C5FD',
-            borderRadius: '16px',
-            padding: '20px 28px',
-            display: 'flex',
-            alignItems: 'center',
-            gap: '14px',
-            marginBottom: '48px',
-            maxWidth: '700px',
-            marginLeft: 'auto',
-            marginRight: 'auto',
-          }}
-        >
-          <span style={{ fontSize: '28px', flexShrink: 0 }}>👥</span>
-          <div>
-            <p style={{ fontSize: '14px', fontWeight: 600, color: '#1E40AF', marginBottom: '2px' }}>
-              Sección en construcción
-            </p>
-            <p style={{ fontSize: '13px', color: '#3B82F6', lineHeight: 1.5 }}>
-              {equipoTrabajo.alertaTexto}
-            </p>
-          </div>
-        </motion.div>
+        {/* Alert Banner - Solo si hay texto de alerta */}
+        {equipoTrabajo.alertaTexto && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={isInView ? { opacity: 1, y: 0 } : {}}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            style={{
+              background: 'linear-gradient(135deg, #EBF5FF, #DBEAFE)',
+              border: '1px solid #93C5FD',
+              borderRadius: '16px',
+              padding: '20px 28px',
+              display: 'flex',
+              alignItems: 'center',
+              gap: '14px',
+              marginBottom: '48px',
+              maxWidth: '700px',
+              marginLeft: 'auto',
+              marginRight: 'auto',
+            }}
+          >
+            <span style={{ fontSize: '28px', flexShrink: 0 }}>👥</span>
+            <div>
+              <p style={{ fontSize: '14px', fontWeight: 600, color: '#1E40AF', marginBottom: '2px' }}>
+                Sección en construcción
+              </p>
+              <p style={{ fontSize: '13px', color: '#3B82F6', lineHeight: 1.5 }}>
+                {equipoTrabajo.alertaTexto}
+              </p>
+            </div>
+          </motion.div>
+        )}
 
         {/* Team Grid */}
         <motion.div

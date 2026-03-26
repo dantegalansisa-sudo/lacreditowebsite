@@ -62,34 +62,27 @@ export const empresa = {
 };
 
 // ─────────────────────────────────────────────
-// 3. INFORMACIÓN DE LA CEO
+// 3. LIDERAZGO EJECUTIVO
 // ─────────────────────────────────────────────
 
-export const ceo = {
-  // Nombre de la CEO
-  nombre: 'Maridani Gerbacio',
+export const liderazgo = {
+  // Foto de presidente y vice presidenta
+  foto: '/images/presidente y vice presidenta.jpeg',
+  fotoAlt: 'Jesús de la Cruz Disla y Maridania Gerbacio — Liderazgo de Grupo Financiero M&J',
 
-  // Foto (ruta relativa desde /public)
-  foto: '/images/ceo.jpg',
+  // Datos del presidente
+  presidente: {
+    nombre: 'Jesús de la Cruz Disla',
+    cargo: 'Empresario y Presidente',
+    bio: 'Empresario y Presidente de Grupo Financiero MYJ. Cree en los préstamos como una oportunidad para impulsar el crecimiento de las personas y sus proyectos. Su enfoque está en apoyar a clientes y emprendedores con financiamientos accesibles. Su visión es fortalecer la empresa y ampliar oportunidades para pequeñas y medianas empresas.',
+  },
 
-  // Alt text de la foto
-  fotoAlt: 'Maridani Gerbacio — CEO Grupo Financiero M&J',
-
-  // Biografía (cada elemento es un párrafo separado)
-  bio: [
-    'Fundadora y CEO de Grupo Financiero M&J, Maridani construyó esta empresa con una premisa clara: que cada dominicano tenga acceso a soluciones financieras reales, rápidas y con la mejor tasa del mercado.',
-    'Su liderazgo cercano y trato personal han convertido a M&J en referente de confianza en el mercado financiero dominicano.',
-  ],
-
-  // Cita de la CEO
-  cita: '"Solucionamos lo que te preocupa porque entendemos lo que significa necesitar una respuesta rápida."',
-
-  // Credenciales / logros (lista con bullets verdes)
-  credenciales: [
-    'Fundadora y CEO de Grupo Financiero M&J',
-    'Especialista en microfinanzas',
-    'Más de 15 años de experiencia en el sector',
-  ],
+  // Datos de la vice presidenta
+  vicepresidenta: {
+    nombre: 'Maridania Gerbacio',
+    cargo: 'Vicepresidenta, Mercadóloga y CIO',
+    bio: 'Vicepresidenta de Grupo Financiero MYJ, mercadóloga y CIO. Se destaca por su enfoque estratégico y liderazgo en la organización de procesos y equipos. Impulsa la colocación de préstamos y nuevas iniciativas orientadas al crecimiento, promoviendo una gestión eficiente y una empresa en constante desarrollo.',
+  },
 };
 
 // ─────────────────────────────────────────────
@@ -436,63 +429,54 @@ export const historiasClientes = {
 export const equipoTrabajo = {
   titulo: 'Conoce a nuestro equipo',
   subtitulo: 'Las personas detrás de cada solución financiera. Profesionales comprometidos con tu bienestar.',
-  alertaTexto: 'Estamos actualizando la información de nuestro equipo. Los datos de contacto estarán disponibles próximamente.',
+  alertaTexto: '', // Ya no necesitamos el alert banner porque tenemos datos reales
 
-  // Equipo placeholder — reemplazar con datos reales
+  // Equipo real de Grupo Financiero M&J
   miembros: [
     {
-      nombre: 'Próximamente',
-      cargo: 'Gerente General',
-      departamento: 'Gerencia',
-      foto: '', // Poner ruta a foto real, ej: '/images/equipo/nombre.jpg'
-      telefono: '', // Ej: '(829) 000-0000'
-      email: '', // Ej: 'gerencia@grupofinancieromj.com'
-      descripcion: 'Dirige la operación general de la empresa, establece las estrategias de crecimiento y asegura la calidad del servicio.',
-    },
-    {
-      nombre: 'Próximamente',
-      cargo: 'Oficial de Crédito',
-      departamento: 'Créditos',
-      foto: '',
+      nombre: 'Estefany Pérez',
+      cargo: 'Supervisora General',
+      departamento: 'Supervisión',
+      foto: '/images/Estefany Pérez.jpeg',
       telefono: '',
       email: '',
-      descripcion: 'Evalúa las solicitudes de préstamo, analiza perfiles crediticios y asesora a los clientes sobre las mejores opciones.',
+      descripcion: 'Supervisa las operaciones diarias de la empresa, coordina equipos de trabajo y asegura el cumplimiento de los estándares de calidad y servicio.',
     },
     {
-      nombre: 'Próximamente',
-      cargo: 'Encargado/a de Contabilidad',
+      nombre: 'Yudelka Mejia',
+      cargo: 'Encargada de Recurso Humano',
+      departamento: 'Recursos Humanos',
+      foto: '/images/Yudelka Mejia.jpeg',
+      telefono: '',
+      email: 'Gestionhumanagrupomj@gmail.com',
+      descripcion: 'Gestiona el talento humano de la empresa, coordina procesos de contratación, capacitación y desarrollo del personal.',
+    },
+    {
+      nombre: 'Nelsida Valdez',
+      cargo: 'Auxiliar de Contabilidad y Área Legal',
       departamento: 'Contabilidad',
-      foto: '',
+      foto: '/images/Nelsida Valdez.jpeg',
       telefono: '',
       email: '',
-      descripcion: 'Gestiona los estados financieros, reportes contables y asegura el cumplimiento fiscal de la empresa.',
+      descripcion: 'Apoya en los procesos contables y financieros de la empresa. También se encarga del área legal y emprendiendo con grupo.',
     },
     {
-      nombre: 'Próximamente',
-      cargo: 'Cajero/a Principal',
-      departamento: 'Caja',
-      foto: '',
+      nombre: 'Andry Pérez',
+      cargo: 'Servicio al Cliente',
+      departamento: 'Atención al Cliente',
+      foto: '/images/andry perez ser, al cliente.jpeg',
       telefono: '',
       email: '',
-      descripcion: 'Maneja los desembolsos, recibe los pagos de cuotas y gestiona el flujo de efectivo diario.',
+      descripcion: 'Primer punto de contacto para los clientes. Brinda información sobre nuestros servicios, resuelve dudas y agenda citas.',
     },
     {
-      nombre: 'Próximamente',
-      cargo: 'Asesor/a de Cobros',
-      departamento: 'Cobros',
-      foto: '',
+      nombre: 'Moisés Brazobán',
+      cargo: 'Gestión Motorizada',
+      departamento: 'Logística',
+      foto: '/images/Moisés Brazobán.jpeg',
       telefono: '',
       email: '',
-      descripcion: 'Da seguimiento a los pagos, mantiene comunicación con los clientes y gestiona los acuerdos de pago.',
-    },
-    {
-      nombre: 'Próximamente',
-      cargo: 'Atención al Cliente',
-      departamento: 'Servicio al Cliente',
-      foto: '',
-      telefono: '',
-      email: '',
-      descripcion: 'Primer punto de contacto para los clientes. Brinda información, resuelve dudas y agenda citas.',
+      descripcion: 'Encargado de la logística y gestión motorizada, facilita la entrega de documentos y pagos, agilizando los procesos operativos.',
     },
   ],
 };
