@@ -455,7 +455,7 @@ export const equipoTrabajo = {
       nombre: 'Jennifer Ferrera',
       cargo: 'Encargada de Contabilidad',
       departamento: 'Contabilidad',
-      foto: '', // Foto pendiente
+      foto: '/images/WhatsApp Image 2026-03-26 at 6.09.09 PM.jpeg',
       telefono: '',
       email: '',
       descripcion: 'Dirige el departamento de contabilidad, supervisa los procesos contables y financieros, y asegura el cumplimiento de las normativas fiscales.',
