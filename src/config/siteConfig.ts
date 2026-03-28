@@ -384,7 +384,7 @@ export const formularioSolicitud = {
   // Textos de la sección
   titulo: 'Solicita tu préstamo ahora',
   subtitulo: 'Completa el formulario y recibe respuesta en menos de 72 horas.',
-  botonTexto: 'Llenar Solicitud →',
+  botonTexto: 'Solicitar por WhatsApp →',
   nota: 'Tu información es 100% confidencial. Solo la usamos para evaluar tu solicitud.',
 };
 

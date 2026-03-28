@@ -1,7 +1,7 @@
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
 import SectionLabel from '../components/SectionLabel';
-import { formularioSolicitud } from '../config/siteConfig';
+import { formularioSolicitud, whatsappUrl } from '../config/siteConfig';
 
 const ease = [0.16, 1, 0.3, 1] as const;
 
@@ -149,7 +149,7 @@ const SolicitudSection = () => {
             style={{ marginTop: '48px' }}
           >
             <motion.a
-              href={formularioSolicitud.url}
+              href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, boxShadow: '0 12px 40px rgba(188,255,79,0.3)' }}
