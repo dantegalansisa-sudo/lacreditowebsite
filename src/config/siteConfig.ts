@@ -1,5 +1,5 @@
 // ╔══════════════════════════════════════════════════════════════════╗
-// ║           CONFIGURACIÓN DE GRUPO FINANCIERO M&J                ║
+// ║           CONFIGURACIÓN DE LA CREDITO GRUPO FINANCIERO         ║
 // ║                                                                ║
 // ║  Este archivo centraliza TODOS los datos editables del sitio.  ║
 // ║  Para hacer cambios, solo modifica los valores aquí.           ║
@@ -15,23 +15,26 @@
 
 export const contacto = {
   // Número de WhatsApp (sin guiones ni espacios, con código de país)
-  whatsappNumero: '18294045264',
+  whatsappNumero: '18096976434',
 
   // Cómo se muestra el teléfono en la web
-  telefonoDisplay: '(829) 404-5264',
+  telefonoDisplay: '(809) 697-6434',
+
+  // Teléfono fijo
+  telefonoFijo: '(809) 521-4121',
 
   // Mensaje predeterminado de WhatsApp
-  whatsappMensaje: 'Hola, vengo de su página web y me interesa un préstamo con Grupo Financiero M&J',
+  whatsappMensaje: 'Hola, vengo de su página web y me interesa un préstamo con La Credito Grupo Financiero',
 
   // Instagram (sin el @)
-  instagram: 'grupofinancieromyj',
+  instagram: 'lacredito',
 
   // Emails de la empresa
-  emailGeneral: 'grupofinanciero@gmail.com',
-  emailRRHH: 'Gestionhumanagrupomj@gmail.com',
+  emailGeneral: 'lacreditoazua@gmail.com',
+  emailRRHH: 'lacreditoazua@gmail.com',
 
   // Ubicación
-  ubicacion: 'República Dominicana',
+  ubicacion: 'C/ Independencia esq. Duvergé #44, Azua, República Dominicana',
 };
 
 // Genera la URL de WhatsApp automáticamente (no tocar)
@@ -43,45 +46,45 @@ export const whatsappUrl = `https://wa.me/${contacto.whatsappNumero}?text=${enco
 
 export const empresa = {
   // Nombre corto (aparece en navbar, footer, etc.)
-  nombreCorto: 'M&J',
+  nombreCorto: 'La Credito',
 
   // Nombre completo
-  nombreCompleto: 'Grupo Financiero M&J',
+  nombreCompleto: 'La Credito Grupo Financiero',
 
   // Subtítulo bajo el logo
   subtituloLogo: 'Grupo Financiero',
 
   // Descripción corta para footer y contacto
-  descripcionCorta: 'Soluciones financieras reales, rápidas y con la mejor tasa del mercado dominicano.',
+  descripcionCorta: 'Préstamos Personales, Hipotecarios, Vehículos, Comerciales y Asesoría Financiera en Azua, República Dominicana.',
 
   // Texto de copyright (el año se agrega automáticamente)
-  copyright: 'Grupo Financiero M&J. Todos los derechos reservados.',
+  copyright: 'La Credito Grupo Financiero. Todos los derechos reservados.',
 
   // Crédito de diseño
   creditoDiseno: 'Diseñado por NEXIX Tech Studio',
 };
 
 // ─────────────────────────────────────────────
-// 3. LIDERAZGO EJECUTIVO
+// 3. GERENCIA GENERAL
 // ─────────────────────────────────────────────
 
 export const liderazgo = {
-  // Foto de presidente y vice presidenta
-  foto: '/images/presidente y vice presidenta.jpeg',
-  fotoAlt: 'Jesús de la Cruz Disla y Maridania Gerbacio — Liderazgo de Grupo Financiero M&J',
+  // Foto del gerente general
+  foto: '/images/lacredito/gerente general.png',
+  fotoAlt: 'Gerente General — La Credito Grupo Financiero',
 
-  // Datos del presidente
+  // Datos del gerente general
   presidente: {
-    nombre: 'Jesús de la Cruz Disla',
-    cargo: 'Empresario y Presidente',
-    bio: 'Empresario y Presidente de Grupo Financiero MYJ. Cree en los préstamos como una oportunidad para impulsar el crecimiento de las personas y sus proyectos. Su enfoque está en apoyar a clientes y emprendedores con financiamientos accesibles. Su visión es fortalecer la empresa y ampliar oportunidades para pequeñas y medianas empresas.',
+    nombre: 'Nombre pendiente',
+    cargo: 'Gerente General',
+    bio: 'Al frente de La Credito Grupo Financiero, nuestro Gerente General aporta su conocimiento y experiencia al crecimiento económico de Azua y sus comunidades. Con una visión centrada en el desarrollo local, lidera una institución comprometida con ofrecer soluciones financieras accesibles, rápidas y con las mejores condiciones del mercado para familias y emprendedores azuanos.',
   },
 
-  // Datos de la vice presidenta
+  // Datos adicionales (no aplica para La Credito)
   vicepresidenta: {
-    nombre: 'Maridania Gerbacio',
-    cargo: 'Vicepresidenta, Mercadóloga y CIO',
-    bio: 'Vicepresidenta de Grupo Financiero MYJ, mercadóloga y CIO. Se destaca por su enfoque estratégico y liderazgo en la organización de procesos y equipos. Impulsa la colocación de préstamos y nuevas iniciativas orientadas al crecimiento, promoviendo una gestión eficiente y una empresa en constante desarrollo.',
+    nombre: '',
+    cargo: '',
+    bio: '',
   },
 };
 
@@ -90,27 +93,27 @@ export const liderazgo = {
 // ─────────────────────────────────────────────
 
 export const inversionistas = {
-  titulo: 'Respaldados por inversionistas que confían en nosotros',
-  subtitulo: 'Más de 10 inversionistas han decidido crecer junto a nuestra empresa, consolidando nuestra posición como una institución financiera sólida y confiable.',
-  numeroInversionistas: '10+',
-  labelInversionistas: 'Inversionistas',
-  frase: 'Su confianza impulsa nuestro compromiso con cada cliente',
+  titulo: 'Respaldados por la confianza de nuestra comunidad',
+  subtitulo: 'Años de trayectoria en Azua nos respaldan. La Credito Grupo Financiero se ha ganado la confianza de cientos de familias y negocios en la región.',
+  numeroInversionistas: '450+',
+  labelInversionistas: 'Clientes satisfechos',
+  frase: 'La confianza de nuestros clientes es nuestro mayor respaldo',
 
   beneficios: [
     {
       icono: '💎',
       titulo: 'Solidez Financiera',
-      descripcion: 'Respaldados por inversionistas que garantizan nuestra estabilidad y crecimiento sostenido.',
+      descripcion: 'Años de trayectoria en Azua garantizan nuestra estabilidad y compromiso con la comunidad.',
     },
     {
       icono: '🚀',
       titulo: 'Crecimiento Continuo',
-      descripcion: 'La inversión nos permite expandir servicios y mejorar la experiencia de nuestros clientes.',
+      descripcion: 'Expandimos nuestros servicios para mejorar la experiencia de nuestros clientes en toda la región.',
     },
     {
       icono: '🤝',
       titulo: 'Confianza Comprobada',
-      descripcion: 'Inversionistas serios que han verificado nuestra trayectoria y modelo de negocio.',
+      descripcion: 'Cientos de familias azuanas han confiado en nosotros para alcanzar sus metas financieras.',
     },
   ],
 };
@@ -121,7 +124,7 @@ export const inversionistas = {
 
 export const hero = {
   // Badge verde arriba del título
-  badge: '✦ SOLUCIONES FINANCIERAS EN RD',
+  badge: '✦ SOLUCIONES FINANCIERAS EN AZUA',
 
   // Título principal (cada línea es un <br/>)
   tituloLinea1: 'Financiamiento',
@@ -139,7 +142,7 @@ export const hero = {
   linkSecundario: '¿Cómo funciona? ↓',
 
   // Línea de confianza
-  textoConfianza: 'Con la confianza de cientos de familias dominicanas',
+  textoConfianza: 'Con la confianza de cientos de familias azuanas',
 
   // Floating cards — datos que aparecen en las tarjetas
   cardPrestado: 'RD$ 150K',
@@ -252,8 +255,8 @@ export const servicios = [
   },
   {
     icon: '🚗',
-    name: 'Préstamo Prendario',
-    desc: 'Tu vehículo como garantía. Rápido, simple, sin complicaciones.',
+    name: 'Préstamo de Vehículos',
+    desc: 'Tu vehículo propio con financiamiento rápido y accesible.',
     tag: null,
   },
   {
@@ -269,7 +272,7 @@ export const servicios = [
 // ─────────────────────────────────────────────
 
 export const estadisticas = [
-  { value: 739, suffix: '+', label: 'Clientes Satisfechos' },
+  { value: 454, suffix: '+', label: 'Seguidores en Instagram' },
   { value: 72, suffix: 'h', label: 'Tiempo de Aprobación' },
   { value: 24, suffix: 'h', label: 'Desembolso en' },
   { value: 100, suffix: '%', label: 'Personalizado' },
@@ -345,7 +348,7 @@ export const razones = [
   { icon: '🤝', num: '03', title: 'Atención Personalizada', desc: 'Un asesor real, no un robot. Siempre disponible.' },
   { icon: '💰', num: '04', title: 'Desembolso en 24h', desc: 'Tu dinero en manos en menos de 24 horas hábiles.' },
   { icon: '📱', num: '05', title: 'Gestión por WhatsApp', desc: 'Todo el proceso desde tu teléfono. Sin papeleo.' },
-  { icon: '🔒', num: '06', title: '100% Confiable', desc: 'Institución seria con años de trayectoria en RD.' },
+  { icon: '🔒', num: '06', title: '100% Confiable', desc: 'Institución seria con años de trayectoria en Azua.' },
 ];
 
 // ─────────────────────────────────────────────
@@ -366,7 +369,7 @@ export const testimonios = [
   {
     name: 'Ana P.',
     initials: 'AP',
-    text: 'Necesitaba un préstamo para mi negocio urgente. Grupo M&J fue la única empresa que me dio respuesta real. Las cuotas son cómodas.',
+    text: 'Necesitaba un préstamo para mi negocio urgente. La Credito fue la única empresa que me dio respuesta real. Las cuotas son cómodas.',
   },
 ];
 
@@ -427,7 +430,7 @@ export const historiasClientes = {
       ocupacion: 'Cliente verificado',
       foto: '', // Poner ruta a foto real, ej: '/images/clientes/juan.jpg'
       videoUrl: '', // Poner URL de YouTube/video, ej: 'https://youtube.com/watch?v=...'
-      historia: 'Historia real de un cliente que logró adquirir su vivienda propia gracias al financiamiento oportuno de Grupo Financiero M&J.',
+      historia: 'Historia real de un cliente que logró adquirir su vivienda propia gracias al financiamiento oportuno de La Credito Grupo Financiero.',
       tipoPrestamo: 'Préstamo Hipotecario',
       tiempoCliente: 'Cliente desde 2023',
     },
@@ -436,7 +439,7 @@ export const historiasClientes = {
       ocupacion: 'Cliente verificado',
       foto: '',
       videoUrl: '',
-      historia: 'Historia real de un emprendedor que impulsó su negocio con el respaldo financiero de M&J y hoy tiene un negocio próspero.',
+      historia: 'Historia real de un emprendedor que impulsó su negocio con el respaldo financiero de La Credito y hoy tiene un negocio próspero.',
       tipoPrestamo: 'Préstamo Comercial',
       tiempoCliente: 'Cliente desde 2024',
     },
@@ -445,7 +448,7 @@ export const historiasClientes = {
       ocupacion: 'Cliente verificado',
       foto: '',
       videoUrl: '',
-      historia: 'Historia real de una familia que resolvió una emergencia financiera gracias a la rapidez y confianza de Grupo Financiero M&J.',
+      historia: 'Historia real de una familia que resolvió una emergencia financiera gracias a la rapidez y confianza de La Credito Grupo Financiero.',
       tipoPrestamo: 'Préstamo Personal',
       tiempoCliente: 'Cliente desde 2024',
     },
@@ -458,73 +461,64 @@ export const historiasClientes = {
 
 export const equipoTrabajo = {
   titulo: 'Conoce a nuestro equipo',
-  subtitulo: 'Las personas detrás de cada solución financiera. Profesionales comprometidos con tu bienestar.',
-  alertaTexto: '', // Ya no necesitamos el alert banner porque tenemos datos reales
+  subtitulo: 'Las personas detrás de cada solución financiera. Profesionales comprometidos con tu bienestar en Azua.',
+  alertaTexto: 'Los datos completos de nuestro equipo están siendo recopilados. Próximamente verás información actualizada.',
 
-  // Equipo real de Grupo Financiero M&J
+  // Equipo de La Credito Grupo Financiero
   miembros: [
     {
-      nombre: 'Estefany Pérez',
-      cargo: 'Supervisora General',
+      nombre: 'Nombre pendiente',
+      cargo: 'Supervisor General',
       departamento: 'Supervisión',
-      foto: '/images/Estefany Pérez.jpeg',
+      foto: '/images/lacredito/supervisor general.png',
       telefono: '',
       email: '',
       descripcion: 'Supervisa las operaciones diarias de la empresa, coordina equipos de trabajo y asegura el cumplimiento de los estándares de calidad y servicio.',
     },
     {
-      nombre: 'Yudelka Mejia',
-      cargo: 'Encargada de Recurso Humano',
-      departamento: 'Recursos Humanos',
-      foto: '/images/Yudelka Mejia.jpeg',
-      telefono: '',
-      email: 'Gestionhumanagrupomj@gmail.com',
-      descripcion: 'Gestiona el talento humano de la empresa, coordina procesos de contratación, capacitación y desarrollo del personal.',
-    },
-    {
-      nombre: 'Jennifer Ferrera',
-      cargo: 'Encargada de Contabilidad',
-      departamento: 'Contabilidad',
-      foto: '/images/WhatsApp Image 2026-03-26 at 6.09.09 PM.jpeg',
+      nombre: 'Nombre pendiente',
+      cargo: 'Equipo Operativo',
+      departamento: 'Operaciones',
+      foto: '/images/lacredito/Screenshot 2026-03-28 182907.png',
       telefono: '',
       email: '',
-      descripcion: 'Dirige el departamento de contabilidad, supervisa los procesos contables y financieros, y asegura el cumplimiento de las normativas fiscales.',
+      descripcion: 'Parte del equipo operativo de La Credito, contribuye al funcionamiento eficiente de los procesos internos y la atención a nuestros clientes.',
     },
     {
-      nombre: 'Rosa Pantaleón',
-      cargo: 'Auxiliar de Contabilidad',
-      departamento: 'Contabilidad',
-      foto: '', // Foto pendiente
+      nombre: 'Nombre pendiente',
+      cargo: 'Equipo Operativo',
+      departamento: 'Operaciones',
+      foto: '/images/lacredito/Screenshot 2026-03-28 182946.png',
       telefono: '',
       email: '',
-      descripcion: 'Apoya en los procesos contables, registra transacciones financieras y colabora en la preparación de reportes contables.',
+      descripcion: 'Miembro del equipo de La Credito, apoyando los procesos de atención al cliente y gestión de solicitudes de préstamos.',
     },
     {
-      nombre: 'Nelsida Valdez',
-      cargo: 'Auxiliar de Contabilidad y Área Legal',
-      departamento: 'Contabilidad',
-      foto: '/images/Nelsida Valdez.jpeg',
-      telefono: '',
-      email: '',
-      descripcion: 'Apoya en los procesos contables y financieros de la empresa. También se encarga del área legal y emprendiendo con grupo.',
-    },
-    {
-      nombre: 'Andry Pérez',
-      cargo: 'Servicio al Cliente',
+      nombre: 'Nombre pendiente',
+      cargo: 'Equipo Operativo',
       departamento: 'Atención al Cliente',
-      foto: '/images/andry perez ser, al cliente.jpeg',
+      foto: '/images/lacredito/Screenshot 2026-03-28 183023.png',
       telefono: '',
       email: '',
-      descripcion: 'Primer punto de contacto para los clientes. Brinda información sobre nuestros servicios, resuelve dudas y agenda citas.',
+      descripcion: 'Brinda atención directa a los clientes, facilita información sobre los servicios financieros y acompaña el proceso de solicitud.',
     },
     {
-      nombre: 'Moisés Brazobán',
-      cargo: 'Gestión Motorizada',
-      departamento: 'Logística',
-      foto: '/images/Moisés Brazobán.jpeg',
+      nombre: 'Nombre pendiente',
+      cargo: 'Equipo Operativo',
+      departamento: 'Operaciones',
+      foto: '/images/lacredito/Screenshot 2026-03-28 183037.png',
       telefono: '',
       email: '',
-      descripcion: 'Encargado de la logística y gestión motorizada, facilita la entrega de documentos y pagos, agilizando los procesos operativos.',
+      descripcion: 'Colabora en los procesos operativos y administrativos de la empresa, asegurando un servicio ágil y eficiente.',
+    },
+    {
+      nombre: 'Nombre pendiente',
+      cargo: 'Equipo Operativo',
+      departamento: 'Operaciones',
+      foto: '/images/lacredito/Screenshot 2026-03-28 183053.png',
+      telefono: '',
+      email: '',
+      descripcion: 'Miembro del equipo comprometido con brindar soluciones financieras accesibles y un servicio de calidad a la comunidad azuana.',
     },
   ],
 };
@@ -560,10 +554,10 @@ export const preguntasFrecuentes = [
   },
   {
     q: '¿Cuáles son las formas de pago disponibles?',
-    a: 'Puedes pagar mediante transferencia bancaria, depósito en cuenta, o directamente en nuestras oficinas. También ofrecemos frecuencia semanal, quincenal o mensual según tu preferencia.',
+    a: 'Puedes pagar mediante transferencia bancaria, depósito en cuenta, o directamente en nuestras oficinas en Azua. También ofrecemos frecuencia semanal, quincenal o mensual según tu preferencia.',
   },
   {
     q: '¿Es seguro solicitar un préstamo con ustedes?',
-    a: 'Absolutamente. Grupo Financiero M&J es una empresa seria con años de trayectoria en República Dominicana. Tu información personal se maneja con total confidencialidad y nuestros procesos son transparentes.',
+    a: 'Absolutamente. La Credito Grupo Financiero es una empresa seria con años de trayectoria en Azua, República Dominicana. Tu información personal se maneja con total confidencialidad y nuestros procesos son transparentes.',
   },
 ];

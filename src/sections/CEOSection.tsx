@@ -24,7 +24,7 @@ const CEOSection = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] as const }}
           style={{ textAlign: 'center', marginBottom: '64px' }}
         >
-          <SectionLabel text="LIDERAZGO EJECUTIVO" />
+          <SectionLabel text="GERENCIA GENERAL" />
           <h2
             style={{
               fontSize: 'clamp(36px, 4vw, 60px)',
@@ -34,13 +34,13 @@ const CEOSection = () => {
               color: 'var(--text-black)',
             }}
           >
-            Nuestra dirección
+            Nuestro liderazgo
             <br />
-            ejecutiva.
+            en Azua.
           </h2>
         </motion.div>
 
-        {/* Photo and Executives Cards */}
+        {/* Photo and Executive Card */}
         <div className="ceo-content">
           {/* Photo */}
           <motion.div
@@ -79,9 +79,9 @@ const CEOSection = () => {
             />
           </motion.div>
 
-          {/* Executives Info */}
+          {/* Executive Info */}
           <div className="ceo-cards-wrap">
-            {/* President Card */}
+            {/* Gerente General Card */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -109,7 +109,7 @@ const CEOSection = () => {
                     marginBottom: '12px',
                   }}
                 >
-                  Presidente
+                  Gerente General
                 </span>
                 <h3
                   style={{
@@ -140,67 +140,25 @@ const CEOSection = () => {
               >
                 {liderazgo.presidente.bio}
               </p>
-            </motion.div>
 
-            {/* Vice President Card */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.7, delay: 0.4, ease: [0.16, 1, 0.3, 1] as const }}
-              style={{
-                background: 'white',
-                borderRadius: '24px',
-                padding: '36px 32px',
-                border: '1.5px solid var(--border)',
-                boxShadow: 'var(--shadow-sm)',
-              }}
-            >
-              <div style={{ marginBottom: '16px' }}>
-                <span
-                  style={{
-                    display: 'inline-block',
-                    background: 'var(--green-logo)',
-                    color: 'white',
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    letterSpacing: '0.06em',
-                    textTransform: 'uppercase',
-                    padding: '4px 12px',
-                    borderRadius: '50px',
-                    marginBottom: '12px',
-                  }}
-                >
-                  Vicepresidenta
-                </span>
-                <h3
-                  style={{
-                    fontSize: '24px',
-                    fontWeight: 700,
-                    color: 'var(--text-black)',
-                    marginBottom: '4px',
-                  }}
-                >
-                  {liderazgo.vicepresidenta.nombre}
-                </h3>
-                <p
-                  style={{
-                    fontSize: '14px',
-                    fontWeight: 600,
-                    color: 'var(--green-logo)',
-                  }}
-                >
-                  {liderazgo.vicepresidenta.cargo}
-                </p>
-              </div>
-              <p
+              {/* Pending data notice */}
+              <div
                 style={{
-                  fontSize: '15px',
-                  color: 'var(--text-body)',
-                  lineHeight: 1.7,
+                  marginTop: '24px',
+                  padding: '14px 18px',
+                  background: 'var(--bg)',
+                  borderRadius: '14px',
+                  border: '1px solid var(--border)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  gap: '10px',
                 }}
               >
-                {liderazgo.vicepresidenta.bio}
-              </p>
+                <span style={{ fontSize: '18px' }}>📋</span>
+                <p style={{ fontSize: '13px', color: 'var(--text-muted)', lineHeight: 1.5 }}>
+                  Nombre y datos adicionales pendientes de confirmación.
+                </p>
+              </div>
             </motion.div>
           </div>
         </div>

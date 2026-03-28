@@ -46,7 +46,7 @@ const WhyUsSection = () => {
           >
             6 razones para confiar
             <br />
-            en Grupo Financiero M&J.
+            en La Credito.
           </h2>
         </motion.div>
 

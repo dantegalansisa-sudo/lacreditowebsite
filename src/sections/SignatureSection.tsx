@@ -86,7 +86,7 @@ const SignatureSection = () => {
     pdf.setFontSize(22);
     pdf.setFont('helvetica', 'bold');
     pdf.setTextColor(13, 27, 42);
-    pdf.text('GRUPO FINANCIERO M&J', 108, 25, { align: 'center' });
+    pdf.text('LA CREDITO GRUPO FINANCIERO', 108, 25, { align: 'center' });
 
     pdf.setFontSize(14);
     pdf.setFont('helvetica', 'normal');
@@ -193,7 +193,7 @@ const SignatureSection = () => {
     /* Save */
     const safeName = formData.nombre.replace(/\s+/g, '_').replace(/[^a-zA-Z0-9_]/g, '');
     const dateStr = new Date().toISOString().split('T')[0];
-    pdf.save(`Solicitud_Prestamo_MJ_${safeName}_${dateStr}.pdf`);
+    pdf.save(`Solicitud_Prestamo_LaCredito_${safeName}_${dateStr}.pdf`);
   };
 
   const handleSubmit = (e: React.FormEvent) => {

@@ -6,7 +6,7 @@ const navLinks = [
   { label: 'Inicio', href: '#inicio' },
   { label: 'Servicios', href: '#servicios' },
   { label: 'Nosotros', href: '#nosotros' },
-  { label: 'CEO', href: '#ceo' },
+  { label: 'Gerente', href: '#ceo' },
   { label: 'Préstamos', href: '#prestamos' },
   { label: 'Firma Digital', href: '#firma-digital' },
   { label: 'Equipo', href: '#equipo' },
